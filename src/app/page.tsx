@@ -1,4 +1,5 @@
-import {Navbar} from '@/components';
+import {Navbar, Experience} from '@/components';
+
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar></Navbar>
         </div>
+        <Experience></Experience>
       </div>
     </div>
     );

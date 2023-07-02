@@ -2,9 +2,9 @@
 import React from 'react'
 import Tilt from 'react-parallax-tilt'
 import {motion} from 'framer-motion'
-import {services} from '../constants/index'
-import {fadeIn, textVariant} from '../utils/motion'
-import {SectionWrapper} from '../wrapper/index'
+import {services} from '@/constants/index'
+import {fadeIn, textVariant} from '@/utils/motion'
+import {SectionWrapper} from '@/wrapper/index'
 
 
 const ServiceCard = ({ service, index }: { service: {icon: string, title: string}; index: number}) => (

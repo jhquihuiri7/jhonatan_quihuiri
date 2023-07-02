@@ -1,4 +1,4 @@
-import {Navbar, Experience, Hero, About, Works} from '@/components';
+import {Navbar, Experience, Hero, About, Works, Contact} from '@/components';
 
 
 export default function Home() {
@@ -12,6 +12,7 @@ export default function Home() {
         <About></About>
         <Experience></Experience>
         <Works></Works>
+        <Contact></Contact>
       </div>
     </div>
     );

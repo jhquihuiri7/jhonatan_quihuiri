@@ -1,7 +1,7 @@
 'use client'
 import React, {useEffect, useState} from 'react'
 import Link from 'next/link';
-import {navLinks, styles} from '@/constants';
+import {navLinks} from '@/constants';
 
 const Navbar = () => {
     const [active, setActive] = useState('')
@@ -28,7 +28,7 @@ const Navbar = () => {
                         <li key={link.id} className={`${
                             active===link.title
                                 ? "text-white"
-                                : "text-red"
+                                : "text-green"
                         } hover:text-white text-lg hover:font-medium cursor-pointer`}
                             onClick={()=>{
                                 setActive(link.title)

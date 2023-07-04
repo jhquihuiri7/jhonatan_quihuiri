@@ -1,4 +1,4 @@
-import {Navbar, Experience, Hero, About, Works, Contact} from '@/components';
+import {Navbar, Experience, Hero, About, Works, Contact, Tech} from '@/components';
 
 
 export default function Home() {
@@ -7,7 +7,6 @@ export default function Home() {
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar></Navbar>
-          <Hero></Hero>
         </div>
         <About></About>
         <Experience></Experience>

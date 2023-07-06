@@ -7,7 +7,7 @@ const Navbar = () => {
     const [active, setActive] = useState('')
     const [toggle, setToggle] = useState(false)
     return (
-        <nav className={`px-6 sm:px-16 w-full flex justify-center items-center fixed py-5 top-0 z-20 bg-sky-950`}>
+        <nav className={`px-6 sm:px-16 w-full flex justify-center items-center fixed py-5 top-0 z-20 bg-[#3b4b8b]`}>
             <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
                 <Link
                     href="/"

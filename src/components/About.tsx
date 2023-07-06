@@ -48,7 +48,7 @@ const About = () => {
           and more recently with desktop publishing software like Aldus PageMaker including
           versions of Lorem Ipsum.
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10 sm:px-10 px-5">
+      <div className="mt-20 flex flex-wrap justify-center gap-10 sm:px-10 px-5">
           {services.map((service, index) =>(
               <ServiceCard key={index} service={service} index={index}/>
           ))}

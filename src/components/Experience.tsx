@@ -5,12 +5,55 @@ import  {motion} from 'framer-motion'
 import 'react-vertical-timeline-component/style.min.css'
 import {experiences} from '@/constants'
 import {SectionWrapper} from '../wrapper/index'
-import {textVariant} from "@/utils/motion";
 import React from "react";
+import Tilt from 'react-parallax-tilt';
+import {fadeIn, textVariant} from "@/utils/motion";
 
-
+const ProjectCard = ({index, name, description, tags, image, source_code_link}:
+{index:any, name:string, description:string,tags:{name:string, color:string}[],image:string, source_code_link:string})=>{
+    return (
+        <motion.div
+            variants={fadeIn("up","spring", index * 0.5, 0.75)}
+            >
+            <Tilt
+                className="bg-white p-5 rounded-2xl sm:w-[360px] w-full"
+                >
+                <div
+                    className="relative w-full h-[230px]"
+                    >
+                    <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl"/>
+                    <div
+                        className="absolute inset-0 flex justify-end m-3 card-img_hover"
+                        >
+                        <div
+                            onClick={() => window.open(source_code_link,"_blank")}
+                            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                            >
+                            <img
+                                src={image}
+                                alt="github"
+                                className="w-1/2 h-1/2 object-contain"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="mt-5">
+                    <h3 className="text-black font-bold text-[24px]">{name}</h3>
+                    <p className="mt-2 text-black text-[14px]"> {description}</p>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-2">
+                    {tags.map((tag)=>(
+                        <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
+                        ))}
+                </div>
+            </Tilt>
+        </motion.div>
+        )
+}
 const ExperienceCard = ({experience}:{experience:
-{icon:string, date:string, iconBg:string, company_name:string, title:string, points:string[]}})=>(
+{icon:string, date:string, iconBg:string, company_name:string, title:string, project:{
+    name: string, description:string, tags:{name:string, color:string}[], image:string, source_code_link:string
+}}})=>(
     <VerticalTimelineElement
         contentStyle={{background:"#1d1836", color:"fff"}}
         contentArrowStyle={{borderRight:"7px solid #232631"}}
@@ -26,20 +69,23 @@ const ExperienceCard = ({experience}:{experience:
         </div>
         }
     >
-       <div>
+       <div
+           >
            <h3>
                {experience.title}
            </h3>
            <p
             className="text-secondary text-[16px] text-semibold"
            >{experience.company_name}</p>
-           <ul className="mt-5 list-disc ml-5 space-y-2">
-               {experience.points.map((point, index) =>(
-                   <li key={`experiences-point-${index}`} className="text-white-100 text-14 pl-1 tracking-wider">
-                       {point}
-                   </li>
-               ))}
-           </ul>
+           <div className="flex justify-center">
+               <ProjectCard
+                   key={`projects-${1}`}
+                   index={1}
+                   {...experience.project}
+
+               />
+           </div>
+
        </div>
     </VerticalTimelineElement>
 )

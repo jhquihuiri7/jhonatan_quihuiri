@@ -1,7 +1,7 @@
 'use-client'
 import React from 'react';
 import {
-    Decal, Float, OrbitControls, useTexture
+    Float, OrbitControls, useTexture, Decal
 }
 from '@react-three/drei';
 import { Canvas} from '@react-three/fiber';
@@ -11,16 +11,20 @@ const Ball = ({imgUrl}:{imgUrl:string}) => {
     const [decal] = useTexture([imgUrl])
     return (
         //@ts-ignore
-        <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+        <Float speed={2.75} rotationIntensity={1} floatIntensity={2}>
             <mesh scale={2.75}>
-                <icosahedronGeometry/>
-                <meshStandardMaterial
-                    color="#fff8eb"
+                <icosahedronGeometry args={[1.1, 20]}/>
+                <meshBasicMaterial color={0xff3b4b8b}/>
+                <Decal
+                    position={[0,0,1]}
+                    rotation={[2*Math.PI,0,6.25]}
+                    scale={1} // Scale of the decal
+                    map={decal}
+                    //@ts-ignore
                     polygonOffset
-                    polygonOffsetFactor={-5}
-                    flatShading
-                />
-               
+                    polygonOffsetFactor={-5} // The mesh should take precedence over the original
+                    >
+                </Decal>
             </mesh>
         </Float>
     )

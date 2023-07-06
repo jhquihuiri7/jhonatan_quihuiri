@@ -9,7 +9,7 @@ export default function Home() {
           <Navbar></Navbar>
         </div>
         <About></About>
-        <Works></Works>
+        <Tech></Tech>
         <Experience></Experience>
         <Contact></Contact>
       </div>

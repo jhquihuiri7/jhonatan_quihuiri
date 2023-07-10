@@ -7,7 +7,7 @@ const Navbar = () => {
     const [active, setActive] = useState('')
     const [toggle, setToggle] = useState(false)
     return (
-        <nav className={`px-6 sm:px-16 w-full flex justify-center items-center fixed py-5 top-0 z-20 bg-[#3b4b8b]`}>
+        <nav className={`px-6 sm:px-16 w-full flex justify-center items-center fixed py-1 top-0 z-20 bg-[#3b4b8b]`}>
             <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
                 <Link
                     href="/"
@@ -17,7 +17,7 @@ const Navbar = () => {
                         window.scrollTo(0,0);
                     }}
                 >
-                    <img src="/assets/logo.svg" alt="logo" className="w-9 h-9 object-contain"></img>
+                    <img src="/logo.png" alt="logo" className="w-16 h-16 object-contain"></img>
                     <p className="text-white text-lg font-bold cursor-pointer flex">
                         Jhonatan &nbsp;
                         <span className="sm:block hidden"> | Backend Developer</span>

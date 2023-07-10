@@ -1,32 +1,27 @@
 'use-client'
-import React from 'react';
+import React, {Suspense} from 'react';
 import {
-    Float, OrbitControls, useTexture, Decal
+    OrbitControls, useTexture
 }
 from '@react-three/drei';
-import { Canvas} from '@react-three/fiber';
+import { Canvas, useLoader} from '@react-three/fiber';
 
-//@ts-ignore
 const Ball = ({imgUrl}:{imgUrl:string}) => {
-    const [decal] = useTexture([imgUrl])
+    const [texture] = useTexture([imgUrl])
     return (
-        //@ts-ignore
-        <Float speed={2.75} rotationIntensity={1} floatIntensity={2}>
-            <mesh scale={2.75}>
-                <icosahedronGeometry args={[1.1, 20]}/>
-                <meshBasicMaterial color={0xff3b4b8b}/>
-                <Decal
-                    position={[0,0,1]}
-                    rotation={[2*Math.PI,0,6.25]}
-                    scale={1} // Scale of the decal
-                    map={decal}
-                    //@ts-ignore
+        <>
+            <ambientLight intensity={0.25}/>
+            <directionalLight position={[0,0,0.5]}/>
+            <mesh scale={2.75} castShadow receiveShadow>
+                <icosahedronGeometry args={[7, 1]}/>
+                <meshStandardMaterial
                     polygonOffset
-                    polygonOffsetFactor={-5} // The mesh should take precedence over the original
-                    >
-                </Decal>
+                    polygonOffsetFactor={-20}
+                    flatShading
+
+                />
             </mesh>
-        </Float>
+        </>
     )
 }
 const BallCanvas = ({icon}:{icon:string})=>{
@@ -34,11 +29,14 @@ const BallCanvas = ({icon}:{icon:string})=>{
         <Canvas
             frameloop="demand"
             shadows
-            camera={{position:[20,3,5], fov:25}}
+            camera={{position:[70,90,100], fov:25}}
             gl={{preserveDrawingBuffer:true}}
         >
-            <OrbitControls enableZoom={false}/>
-            <Ball imgUrl={icon}></Ball>
+            <Suspense >
+                <OrbitControls enableZoom={false}/>
+                <Ball imgUrl={icon}></Ball>
+            </Suspense>
+
         </Canvas>
     )
 }

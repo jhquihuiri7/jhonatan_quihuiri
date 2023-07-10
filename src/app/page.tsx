@@ -1,9 +1,10 @@
-import {Navbar, Experience, Hero, About, Works, Contact, Tech} from '@/components';
+import {Navbar, Experience, Hero, About, Contact, Tech} from '@/components';
 
 
 export default function Home() {
+
   return (
-    <div>
+      <div>
       <div className="relative z-0 bg-[#010e21]">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar></Navbar>

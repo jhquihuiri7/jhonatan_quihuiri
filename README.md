@@ -32,3 +32,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+Mi nombres es Jhonatan Quihuiri, soy un apasionado por el desarrollo.
+
+Nombre: Jhonatan Quihuri
+Passion: Desarrollo de software
+Areas: Desarrollo Backend, Data Analysis, Desarrollo Movil
+
+Te invito a que explores mi portafolio y conozcas mas sobre mi.
+
+
+Con la siguiente informacion, escribe un overview de mi perfil en ingles para mi portafolio como desarrollador, estedebe contener la informacion siguiente, recuerda utilzar un lenguaje que llamen la atencion del lector:
+
+
+

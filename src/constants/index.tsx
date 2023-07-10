@@ -63,17 +63,50 @@ export const projects = [
         source_code_link: "https://github.com/",
     },
 ];
-export const technologies = [
-    {
-        icon:"./assets/backend.png"
-    },
-    {
-        icon:"./assets/backend.png"
-    },
-    {
-        icon:"./assets/backend.png"
-    }
-]
+export const technologies = {
+    langages:[
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+        },
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+        },
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+        },
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
+        },
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+        },
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+        },
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+        }
+    ],
+    tools:[
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+        },
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+        },
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+        },
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg"
+        }
+    ],
+    design:[
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+        }
+    ]
+}
 export const experiences = [
     {
         title: "React.js Developer",

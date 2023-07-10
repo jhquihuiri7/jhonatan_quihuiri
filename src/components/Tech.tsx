@@ -4,7 +4,6 @@ import {SectionWrapper} from "@/wrapper";
 import {textVariant} from "@/utils/motion";
 import {motion} from "framer-motion";
 import {technologies} from '@/constants';
-import {BallCanvas} from './canvas';
 
 const Tech = () => {
   return (
@@ -18,18 +17,18 @@ const Tech = () => {
       </h2>
     </motion.div>
     <div className="flex flex-row justify-center gap-10 py-6">
-      {technologies.langages.map((language)=>(
-          <img src={language.icon} style={{height: 100 + 'px',width: 100 + 'px'}}/>
+      {technologies.langages.map((language, index)=>(
+          <img key={index} src={language.icon} style={{height: 100 + 'px',width: 100 + 'px'}}/>
       ))}
     </div>
     <div className="flex flex-row justify-center gap-10 py-6">
-      {technologies.tools.map((tool)=>(
-          <img src={tool.icon} style={{height: 100 + 'px',width: 100 + 'px'}}/>
+      {technologies.tools.map((tool, index)=>(
+          <img key={index} src={tool.icon} style={{height: 100 + 'px',width: 100 + 'px'}}/>
       ))}
     </div>
       <div className="flex flex-row justify-center gap-10 py-6">
-        {technologies.design.map((tool)=>(
-            <img src={tool.icon} style={{height: 100 + 'px',width: 100 + 'px'}}/>
+        {technologies.design.map((tool, index)=>(
+            <img key={index} src={tool.icon} style={{height: 100 + 'px',width: 100 + 'px'}}/>
         ))}
       </div>
     </>

@@ -6,6 +6,7 @@ import About from './About';
 import Works from './Works';
 import Contact from './Contact';
 import Tech from './Tech';
+import ParticlesBackground from './Particles';
 export {
   Navbar,
   Experience,
@@ -14,4 +15,5 @@ export {
   Works,
   Contact,
   Tech,
+  ParticlesBackground,
 };

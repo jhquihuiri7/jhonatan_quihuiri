@@ -7,6 +7,7 @@ import Works from './Works';
 import Contact from './Contact';
 import Tech from './Tech';
 import ParticlesBackground from './Particles';
+import Header from './Header';
 export {
   Navbar,
   Experience,
@@ -16,4 +17,5 @@ export {
   Contact,
   Tech,
   ParticlesBackground,
+  Header,
 };

@@ -7,20 +7,20 @@ import {fadeIn, textVariant} from '@/utils/motion'
 import {SectionWrapper} from '@/wrapper/index'
 
 const ServiceCard = ({ service, index }: { service: {icon: string, title: string}; index: number}) => (
-    <Tilt className="xs:w-full w-[250px]">
+    <Tilt className="xs:w-full w-[210px]">
         <motion.div
             variants={fadeIn("rigth","spring",0.5 * index, 0.75)}
-            className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+            className="w-full bg-gradient-to-tr from-[#882afa] from-0% to-[#ffa0d8] to-90% p-[1px] rounded-[20px] shadow-card"
         >
             <div
-                className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+                className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[250px] flex justify-evenly items-center flex-col"
             >
                 <img
                     src={service.icon}
                     alt={service.title}
-                    className="w-16 h-16 object-contain"
+                    className="w-24 h-24 object-contain"
                 />
-                <h3 className="text-white text-[20px]text-bold text-center">
+                <h3 className="text-white text-[20px] text-bold text-center">
                     {service.title}
                 </h3>
             </div>
@@ -38,14 +38,11 @@ const About = () => {
           variants={fadeIn("","",0.1,1)}
           className="mt-4 text-secondary text-[17px] max-w-3l leadeing-[30px] sm:px-10 px-5"
       >
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type
-          specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-          and more recently with desktop publishing software like Aldus PageMaker including
-          versions of Lorem Ipsum.
+          Welcome to my developer portfolio! I am a passionate and dedicated professional with expertise in backend
+          development, mobile app development, and data analysis. The world of finance, trading, programming, and data
+          fuels my curiosity and drives me to excel in my academic and professional responsibilities. I invite you to
+          explore my portfolio to witness my problem-solving abilities and the impact I have made across various domains.
+          Let's connect and discuss!
       </motion.p>
       <div className="mt-20 flex flex-wrap justify-center gap-10 sm:px-10 px-5">
           {services.map((service, index) =>(

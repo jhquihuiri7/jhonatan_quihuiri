@@ -181,15 +181,15 @@ export const navLinks = [
 export const services = [
     {
         title: "Data Analyst",
-        icon: "./assets/web.png",
+        icon: "./about/dataIcon.png",
     },
     {
         title: "Backend Developer",
-        icon: "./assets/web.png",
+        icon: "./about/serverIcon.png",
     },
     {
         title: "Mobile Development",
-        icon: "./assets/web.png",
+        icon: "./about/phoneIcon.png",
     },
 ];
 export const styles = {

@@ -1,5 +1,5 @@
 'use client'
-import {Navbar, Experience, About, Contact, Tech, ParticlesBackground} from '@/components';
+import {Navbar, Experience, About, Contact, Tech, ParticlesBackground,Header} from '@/components';
 import {useEffect} from 'react';
 export default function Home() {
 
@@ -24,6 +24,7 @@ export default function Home() {
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar></Navbar>
         </div>
+        <Header></Header>
         <About></About>
         <Tech></Tech>
         <Experience></Experience>

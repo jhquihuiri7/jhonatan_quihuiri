@@ -35,7 +35,7 @@ const ParticlesBackground = () => {
     },[vantaEffect])
     return (
         <div className="flex flex-row">
-            <div id="background" ref={vantaRef} style={{height: 110 + 'vh', width: 99 + 'vw', zIndex: -1}}>
+            <div id="background" className="w-full h-full" ref={vantaRef} style={{zIndex: -1}}>
             </div>
         </div>
 

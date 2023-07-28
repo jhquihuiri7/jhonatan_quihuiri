@@ -1,5 +1,5 @@
 'use client'
-import {Navbar, Experience, About, Contact, Tech, ParticlesBackground,Header} from '@/components';
+import {Navbar, Experience, About, Contact, Tech, ParticlesBackground,Header, Footer} from '@/components';
 import {useEffect} from 'react';
 export default function Home() {
 
@@ -29,6 +29,7 @@ export default function Home() {
         <Tech></Tech>
         <Experience></Experience>
         <Contact></Contact>
+        <Footer></Footer>
       </div>
 
     );

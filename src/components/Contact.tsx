@@ -1,7 +1,6 @@
 'use client'
 import {useState, useRef} from 'react';
 import {motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 
 import {EarthCanvas} from './canvas';
 import {SectionWrapper} from '@/wrapper';
@@ -31,20 +30,20 @@ const Contact = () => {
                     //@ts-ignore
                     ref={formRef}
                     onSubmit={handleSubmit}
-                    className="mt-12 flex flex-col gap-8"
+                    className="mt-12 flex flex-col gap-8 bg-white/[.7] xl:px-12 px-5 py-5 rounded-xl"
                     >
                     <label className="flex flex-col">
                         <span className="text-white font-medium mb-4">Your Name</span>
                         <input
                             type="text" name="name" value={form.name} onChange={handleChange} placeholder="What's your name?"
-                            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+                            className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                             ></input>
                     </label>
                     <label className="flex flex-col">
                         <span className="text-white font-medium mb-4">Your Email</span>
                         <input
                             type="email" name="email" value={form.email} onChange={handleChange} placeholder="What's your email?"
-                            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+                            className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                             ></input>
                     </label>
                     <label className="flex flex-col">
@@ -52,17 +51,17 @@ const Contact = () => {
                         <textarea
                             //@ts-ignore
                             rows="7" name="message" value={form.message} onChange={handleChange} placeholder="What do you want to say?"
-                            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+                            className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                             ></textarea>
                     </label>
-                    <button type="submit" className="bg-tertiaty py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl">
+                    <button type="submit" className="bg-gradient-to-tr from-[#882afa] from-0% to-[#ffa0d8] to-90% py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl">
                         {loading ? "Sending..." : "Send"}
                     </button>
                 </form>
             </motion.div>
             <motion.div
                 variants={slideIn('rigth',"tween",0.2,1)}
-                className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+                className="xl:flex-1"
                 >
                 <EarthCanvas></EarthCanvas>
             </motion.div>

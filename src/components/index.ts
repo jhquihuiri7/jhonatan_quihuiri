@@ -8,6 +8,7 @@ import Contact from './Contact';
 import Tech from './Tech';
 import ParticlesBackground from './Particles';
 import Header from './Header';
+import Footer from './Footer'
 export {
   Navbar,
   Experience,
@@ -18,4 +19,5 @@ export {
   Tech,
   ParticlesBackground,
   Header,
+  Footer,
 };

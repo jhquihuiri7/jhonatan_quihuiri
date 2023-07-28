@@ -92,6 +92,9 @@ export const technologies = {
             icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
         },
         {
+            icon:"https://res.cloudinary.com/logicielapplab/image/upload/v1690393645/JhonatanQuihuiri/Tech/djangoSvg_ur1bx0.svg"
+        },
+        {
             icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
         },
         {

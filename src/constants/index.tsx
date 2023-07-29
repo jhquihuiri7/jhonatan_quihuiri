@@ -195,6 +195,20 @@ export const services = [
         icon: "./about/phoneIcon.png",
     },
 ];
+export const social = [
+    {
+        url: "https://github.com/jhquihuiri7",
+        icon: "./social/github.svg",
+    },
+    {
+        url: "https://www.linkedin.com/in/jhquihuiri7/",
+        icon: "./social/linkedin.svg",
+    },
+    {
+        url: "https://www.instagram.com/jhquihuiri7/",
+        icon: "./social/instagram.svg",
+    },
+];
 export const styles = {
     paddingX: "px-6 sm:px-16",
     paddingY: "sm:py-16 py-6",

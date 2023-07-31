@@ -34,9 +34,9 @@ const Header = ()=>{
                     }}
                 />
             </div>
-            <motion.div  variants={fadeIn("right","",0.1,1)} className="absolute right-0 top-[250px] bg-white/[.7] lg:h-[80px] lg:w-[40px] h-[110px] w-[50px] rounded-l-lg flex flex-col justify-around items-center">
+            <motion.div  variants={fadeIn("right","",0.1,1)} className="absolute right-0 top-[250px] bg-white/[.7] h-[110px] w-[50px] rounded-l-lg flex flex-col justify-around items-center">
                 {social.map(({url,icon}, index)=>(
-                    <a href={url}><img className="lg:h-[20px] lg:w-[20px] h-[30px] w-[30px]" src={icon}/></a>
+                    <a href={url}><img className="h-[30px] w-[30px]" src={icon}/></a>
                 ))}
             </motion.div>
         </div>

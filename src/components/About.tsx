@@ -7,20 +7,20 @@ import {fadeIn, textVariant} from '@/utils/motion'
 import {SectionWrapper} from '@/wrapper/index'
 
 const ServiceCard = ({ service, index }: { service: {icon: string, title: string}; index: number}) => (
-    <Tilt className="xs:w-full w-[210px]">
+    <Tilt>
         <motion.div
             variants={fadeIn("rigth","spring",0.5 * index, 0.75)}
             className="w-full bg-gradient-to-tr from-[#882afa] from-0% to-[#ffa0d8] to-90% p-[1px] rounded-[20px] shadow-card"
         >
             <div
-                className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[250px] flex justify-evenly items-center flex-col"
+                className="bg-tertiary rounded-[20px] py-4 px-10 flex justify-evenly items-center flex-col"
             >
                 <img
                     src={service.icon}
                     alt={service.title}
-                    className="w-24 h-24 object-contain"
+                    className="w-20 h-20 object-contain"
                 />
-                <h3 className="text-white text-[20px] text-bold text-center">
+                <h3 className="text-white text-lg text-bold text-center">
                     {service.title}
                 </h3>
             </div>

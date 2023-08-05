@@ -7,7 +7,7 @@ const Header = ()=>{
 
     return(
         <div className="w-full h-screen static">
-            <div className="flex flex-col items-start justify-start lg:p-32  py-16 px-8 w-full h-[50%]">
+            <div className="flex flex-col items-start justify-start lg:p-32  py-16 px-8 w-full h-[45%]">
                 <p className="lg:text-[130px] text-[110px] font-black">
                     HE
                 </p>
@@ -15,7 +15,7 @@ const Header = ()=>{
                     LLO<span className="text-[#ed0762]">.</span>
                 </p>
             </div>
-            <div className="flex flex-col items-end justify-end w-full h-[50%] lg:p-32 pb-24 px-4">
+            <div className="flex flex-col items-end justify-end w-full h-[32%] lg:px-32 px-4">
                 <ReactTypingEffect
                     text={["I am  Jhonatan Quihuiri"]}
                     displayTextRenderer={(text:string, i:number) => {
@@ -33,6 +33,23 @@ const Header = ()=>{
                         );
                     }}
                 />
+            </div>
+            <div className="flex flex-col items-center justify-center w-full h-[80px]">
+                <a href="#about">
+                    <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+                        <motion.div
+                            animate={{
+                                y:[0,24,0]
+                            }}
+                            transition={{
+                                duration:1.5,
+                                repeat:Infinity,
+                                repeatType:"loop"
+                            }}
+                            className='w-3 h-3 rounded-full bg-white mb-1'
+                        />
+                    </div>
+                </a>
             </div>
             <motion.div  variants={fadeIn("right","",0.1,1)} className="absolute right-0 top-[250px] bg-white/[.7] h-[110px] w-[50px] rounded-l-lg flex flex-col justify-around items-center">
                 {social.map(({url,icon}, index)=>(

@@ -16,31 +16,50 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}:
             variants={fadeIn("up","spring", index * 0.5, 0.75)}
             >
             <Tilt
-                className="bg-white p-5 rounded-2xl sm:w-[360px] w-full"
+                className="p-5 rounded-2xl sm:w-[360px] w-full"
                 >
                 <div
                     className="relative w-full h-[230px]"
                     >
                     <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl"/>
                     <div
-                        className="absolute inset-0 flex justify-end m-3 card-img_hover"
+                        className="absolute inset-0 flex justify-end card-img_hover"
                         >
                         <div
                             onClick={() => window.open(source_code_link,"_blank")}
-                            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                            className="bg-gradient-to-tr from-[#fc4738] from-0% to-[#ff7831] to-90% w-10 h-10 rounded-full flex justify-center items-center cursor-pointer m-3"
                             >
                             <img
-                                src={image}
+                                src="./social/github.svg"
                                 alt="github"
                                 className="w-1/2 h-1/2 object-contain"
                             />
                         </div>
                     </div>
                 </div>
-                <div className="mt-5">
-                    <h3 className="text-black font-bold text-[24px]">{name}</h3>
-                    <p className="mt-2 text-black text-[14px]"> {description}</p>
+                <div className="mt-5 flex flex-row gap-2">
+                    <div className="h-auto w-5 bg-[#d0bfff]/[.5] rounded-lg ml-1">
+                        <div className="h-2/3 w-5 bg-[#9669f9]/[.5] rounded-lg">
+                            <div className="h-1/3 w-5 bg-[#6647d6]/[.5] rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 className="text-black font-bold text-[24px]">{name}</h3>
+                        <p className="mt-2 text-black text-[14px]"> {description}</p>
+                    </div>
+
                 </div>
+                <a href="">
+                    <div className="mt-4 flex flex-row justify-center items-center rounded-3xl h-14 bg-white">
+                        <div className="w-20 m-0 text-xs text-black">Lauch or Scan</div>
+                        <img
+                            src="./social/github.svg"
+                            alt="github"
+                            className="h-4/5 object-contain"
+                        />
+                    </div>
+                </a>
                 <div className="mt-4 flex flex-wrap gap-2">
                     {tags.map((tag)=>(
                         <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
@@ -55,9 +74,9 @@ const ExperienceCard = ({experience}:{experience:
     name: string, description:string, tags:{name:string, color:string}[], image:string, source_code_link:string
 }}})=>(
     <VerticalTimelineElement
-        contentStyle={{background:"#1d1836", color:"fff"}}
+        contentStyle={{background:"rgba(255,255,255,0.2)", color:"#fff"}}
         contentArrowStyle={{borderRight:"7px solid #232631"}}
-        date={experience.date}
+        //date={experience.date}
         iconStyle={{background:experience.iconBg}}
         icon={
         <div>
@@ -71,19 +90,14 @@ const ExperienceCard = ({experience}:{experience:
     >
        <div
            >
-           <h3>
-               {experience.title}
-           </h3>
-           <p
-            className="text-secondary text-[16px] text-semibold"
-           >{experience.company_name}</p>
-           <div className="flex justify-center">
+           <div className="flex justify-center flex-row">
                <ProjectCard
                    key={`projects-${1}`}
                    index={1}
                    {...experience.project}
 
                />
+
            </div>
 
        </div>

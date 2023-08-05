@@ -18,17 +18,17 @@ const Tech = () => {
     </motion.div>
     <div className="flex flex-row flex-wrap justify-center gap-10 py-6">
       {technologies.langages.map((language, index)=>(
-          <img key={index} src={language.icon} style={{height: 100 + 'px',width: 100 + 'px'}}/>
+          <img key={index} src={language.icon} style={{height: 80 + 'px',width: 80 + 'px'}}/>
       ))}
     </div>
     <div className="flex flex-row flex-wrap justify-center gap-10 py-6">
       {technologies.tools.map((tool, index)=>(
-          <img key={index} src={tool.icon} style={{height: 100 + 'px',width: 100 + 'px'}}/>
+          <img key={index} src={tool.icon} style={{height: 80 + 'px',width: 80 + 'px'}}/>
       ))}
     </div>
       <div className="flex flex-row flex-wrap justify-center gap-10 py-6">
         {technologies.design.map((tool, index)=>(
-            <img key={index} src={tool.icon} style={{height: 100 + 'px',width: 100 + 'px'}}/>
+            <img key={index} src={tool.icon} style={{height: 80 + 'px',width: 80 + 'px'}}/>
         ))}
       </div>
     </>

@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="accf0e74-0265-48e1-8f34-74e7613f0f02" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Experience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Experience.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tech.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tech.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jhquihuiri7/Documents/REACT/jhonatan_quihuiri/public/social&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jhquihuiri7/Documents/REACT/jhonatan_quihuiri/public&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -64,10 +68,10 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/social" />
       <recent name="$PROJECT_DIR$/public/lotties" />
       <recent name="$PROJECT_DIR$/public/about" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/lotties" />
@@ -124,7 +128,15 @@
       <workItem from="1690792997453" duration="7000" />
       <workItem from="1690804910880" duration="4821000" />
       <workItem from="1690811142017" duration="12000" />
-      <workItem from="1690815879378" duration="1460000" />
+      <workItem from="1690815879378" duration="1564000" />
+      <workItem from="1690963949774" duration="61000" />
+      <workItem from="1691231197826" duration="1425000" />
+      <workItem from="1691232739659" duration="320000" />
+      <workItem from="1691233787365" duration="2697000" />
+      <workItem from="1691237766175" duration="5348000" />
+      <workItem from="1691250350156" duration="918000" />
+      <workItem from="1691251693979" duration="484000" />
+      <workItem from="1691252687920" duration="767000" />
     </task>
     <servers />
   </component>

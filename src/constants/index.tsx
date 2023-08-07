@@ -112,46 +112,50 @@ export const technologies = {
 }
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: "./assets/backend.png",
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
+        title: "",
+        company_name: "Dive Evolution",
+        icon: "./projects/diveEvolutionIcon.png",
+        iconBg: "#131a43",
+        date: "",
         project: {
-            name: "Car Rent",
+            name: "Dive Evolution",
             description:
             "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
             tags: [
                 {
-                    name: "react",
+                    name: "golang",
                     color: "blue-text-gradient",
                 },
                 {
-                    name: "mongodb",
+                    name: "website",
                     color: "green-text-gradient",
                 },
                 {
-                    name: "tailwind",
+                    name: "appengine",
+                    color: "pink-text-gradient",
+                },
+                {
+                    name: "backend",
                     color: "pink-text-gradient",
                 },
                 ],
             image: "./prueba.png",
-            source_code_link: "https://github.com/",
+            source_code_link: "https://github.com/jhquihuiri7/diveEvolutionBackend",
         },
     },
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: "./assets/backend.png",
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
+        title: "",
+        company_name: "Gaviota Ferry",
+        icon: "./projects/gaviotaIcon.png",
+        iconBg: "#ffffff",
+        date: "",
         project: {
-            name: "Car Rent",
+            name: "Gaviota Ferry",
             description:
             "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
             tags: [
                 {
-                    name: "react",
+                    name: "golang",
                     color: "blue-text-gradient",
                 },
                 {
@@ -159,10 +163,42 @@ export const experiences = [
                     color: "green-text-gradient",
                 },
                 {
-                    name: "tailwind",
+                    name: "appengine",
+                    color: "pink-text-gradient",
+                },
+                {
+                    name: "backend",
                     color: "pink-text-gradient",
                 },
                 ],
+            image: "./prueba.png",
+            source_code_link: "https://github.com/jhquihuiri7/gaviotaBackend",
+        },
+    },
+    {
+        title: "",
+        company_name: "Logiciel Applab",
+        icon: "./projects/logicielIcon.png",
+        iconBg: "#131a43",
+        date: "",
+        project: {
+            name: "Logiciel Applab",
+            description:
+                "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            tags: [
+                {
+                    name: "react",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "typescript",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "frontend",
+                    color: "pink-text-gradient",
+                },
+            ],
             image: "./prueba.png",
             source_code_link: "https://github.com/",
         },

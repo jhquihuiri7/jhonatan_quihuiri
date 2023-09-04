@@ -139,7 +139,7 @@ export const experiences = [
                     color: "pink-text-gradient",
                 },
                 ],
-            image: "./prueba.png",
+            image: "./projects/diveevolutionportada1-min.png",
             source_code_link: "https://github.com/jhquihuiri7/diveEvolutionBackend",
         },
     },

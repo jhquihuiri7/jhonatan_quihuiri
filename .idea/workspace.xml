@@ -6,7 +6,96 @@
   <component name="ChangeListManager">
     <list default="true" id="accf0e74-0265-48e1-8f34-74e7613f0f02" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/backend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/carrent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/company/meta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/company/shopify.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/company/starbucks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/company/tesla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/creator.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/herobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/jobit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mobile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/css.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/docker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/figma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/git.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/html.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/javascript.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/mongodb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/nodejs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/reactjs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/redux.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/tailwind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/threejs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tech/typescript.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tripguide.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/web.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/scene.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/scene.gltf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.002_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.023_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.024_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_0_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_10_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_11_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_12_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_13_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_14_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_15_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_16_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_17_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_18_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_18_emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_19_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_1_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_20_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_21_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_22_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_23_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_24_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_24_emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_25_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_26_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_27_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_27_emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_28_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_29_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_2_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_30_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_31_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_32_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_33_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_34_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_35_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_36_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_39_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_3_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_40_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_4_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_4_emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_5_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_6_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_7_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_8_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_9_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_9_emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material.074_baseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Material_metallicRoughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/desktop_pc/textures/Tasten_2_baseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/lotties/animation.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/lotties/animation_ljz92jwk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/lotties/animation_ljz9al0k.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/lotties/animation_ljz9beee.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/lotties/animation_ljz9d6a4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/lotties/animation_ljz9ejyc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/prueba.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Experience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Experience.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/index.tsx" afterDir="false" />
     </list>
@@ -50,7 +139,7 @@
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/jhquihuiri7/Documents/REACT/jhonatan_quihuiri/public/tech",
+    "last_opened_file_path": "/home/jhquihuiri7/Documents/REACT/jhonatan_quihuiri",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -65,11 +154,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/projects" />
       <recent name="$PROJECT_DIR$/public/tech" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/social" />
       <recent name="$PROJECT_DIR$/public/lotties" />
-      <recent name="$PROJECT_DIR$/public/about" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/lotties" />
@@ -136,7 +225,13 @@
       <workItem from="1691251693979" duration="484000" />
       <workItem from="1691252687920" duration="767000" />
       <workItem from="1691255950279" duration="577000" />
-      <workItem from="1691398157825" duration="1851000" />
+      <workItem from="1691398157825" duration="2166000" />
+      <workItem from="1691405548492" duration="83000" />
+      <workItem from="1691583545165" duration="1381000" />
+      <workItem from="1691585998199" duration="392000" />
+      <workItem from="1691586898988" duration="1264000" />
+      <workItem from="1691609374965" duration="89000" />
+      <workItem from="1693861773223" duration="2102000" />
     </task>
     <servers />
   </component>

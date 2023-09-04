@@ -14,7 +14,11 @@ const Contact = () => {
         message:'',
     })
     const [loading, setLoading] = useState(false);
-    const handleChange = () => {}
+    // @ts-ignore
+    const handleChange = (event, type) => {
+        console.log(event.target.value)
+        console.log(type)
+    }
     const handleSubmit = () => {}
     return (
         <div
@@ -35,14 +39,14 @@ const Contact = () => {
                     <label className="flex flex-col">
                         <span className="text-white font-medium mb-4">Your Name</span>
                         <input
-                            type="text" name="name" value={form.name} onChange={handleChange} placeholder="What's your name?"
+                            type="text" name="name" onChange={(event)=>handleChange(event,"Hola")} placeholder="What's your name?"
                             className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                             ></input>
                     </label>
                     <label className="flex flex-col">
                         <span className="text-white font-medium mb-4">Your Email</span>
                         <input
-                            type="email" name="email" value={form.email} onChange={handleChange} placeholder="What's your email?"
+                            type="email" name="email" onChange={(event)=>handleChange(event,"Hola")} placeholder="What's your email?"
                             className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                             ></input>
                     </label>
@@ -50,7 +54,7 @@ const Contact = () => {
                         <span className="text-white font-medium mb-4">Your Message</span>
                         <textarea
                             //@ts-ignore
-                            rows="7" name="message" value={form.message} onChange={handleChange} placeholder="What do you want to say?"
+                            rows="7" name="message" onChange={(event)=>handleChange(event,"Hola")} placeholder="What do you want to say?"
                             className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                             ></textarea>
                     </label>

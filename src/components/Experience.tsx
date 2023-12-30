@@ -1,6 +1,5 @@
 'use client'
 //@ts-ignore
-import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
 import  {motion} from 'framer-motion'
 import 'react-vertical-timeline-component/style.min.css'
 import {experiences} from '@/constants'
@@ -9,6 +8,8 @@ import React from "react";
 import Tilt from 'react-parallax-tilt';
 import {fadeIn, textVariant} from "@/utils/motion";
 
+
+
 const ProjectCard = ({index, name, description, tags, image, source_code_link}:
 {index:any, name:string, description:string,tags:{name:string, color:string}[],image:string, source_code_link:string})=>{
     return (
@@ -16,7 +17,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}:
             variants={fadeIn("up","spring", index * 0.5, 0.75)}
             >
             <Tilt
-                className="p-5 rounded-2xl sm:w-[360px] w-full"
+                className="p-5 rounded-2xl sm:w-[360px] w-full bg-[#ffffff]/[.2]"
                 >
                 <div
                     className="relative w-full"
@@ -73,56 +74,31 @@ const ExperienceCard = ({experience}:{experience:
 {icon:string, date:string, iconBg:string, company_name:string, title:string, project:{
     name: string, description:string, tags:{name:string, color:string}[], image:string, source_code_link:string
 }}})=>(
-    <VerticalTimelineElement
-        contentStyle={{background:"rgba(255,255,255,0.2)", color:"#fff"}}
-        contentArrowStyle={{borderRight:"7px solid #232631"}}
-        //date={experience.date}
-        iconStyle={{background:experience.iconBg}}
-        icon={
-        <div>
-            <img
-                src={experience.icon}
-                alt={experience.company_name}
-                className="w-[60&] h-[60%] object-contain"
-            />
-        </div>
-        }
-    >
-       <div
-           >
-           <div className="flex justify-center flex-row">
-               <ProjectCard
-                   key={`projects-${1}`}
-                   index={1}
-                   {...experience.project}
+    <ProjectCard
+        key={`projects-${1}`}
+        index={1}
+        {...experience.project}
 
-               />
-
-           </div>
-
-       </div>
-    </VerticalTimelineElement>
+    />
 )
-const Experience = () => {
-  return (
-      <>
-          <motion.div variants={textVariant(0.1)} className="sm:px-10 px-5">
-              <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
-                  WHAT I HAVE DONE SO FAR
-              </p>
-              <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
-                  WORK EXPERIENCE
-              </h2>
-          </motion.div>
-          <div className="nt-20 flex flex-col">
-              <VerticalTimeline>
-                  {experiences.map((experience, index) => (
-                      <ExperienceCard key={index} experience={experience}/>
-                  ))}
-              </VerticalTimeline>
-          </div>
-      </>
-  )
-}
 
+const Experience = () => {
+    return (
+        <>
+            <motion.div variants={textVariant(0.1)} className="sm:px-10 px-5">
+                <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
+                    WHAT I HAVE DONE SO FAR
+                </p>
+                <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+                    WORK EXPERIENCE
+                </h2>
+            </motion.div>
+            <div className='flex flex-row justify-evenly'>
+                {experiences.map((experience, index) => (
+                    <ExperienceCard key={index} experience={experience}/>
+                ))}
+            </div>
+        </>
+    )
+}
 export default SectionWrapper(Experience,"work")

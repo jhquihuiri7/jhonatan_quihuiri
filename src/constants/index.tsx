@@ -203,34 +203,6 @@ export const experiences = [
             source_code_link: "https://github.com/",
         },
     },
-    {
-        title: "",
-        company_name: "Logiciel Applab",
-        icon: "./projects/logicielIcon.png",
-        iconBg: "#131a43",
-        date: "",
-        project: {
-            name: "Logiciel Applab",
-            description:
-                "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-            tags: [
-                {
-                    name: "react",
-                    color: "blue-text-gradient",
-                },
-                {
-                    name: "typescript",
-                    color: "green-text-gradient",
-                },
-                {
-                    name: "frontend",
-                    color: "pink-text-gradient",
-                },
-            ],
-            image: "./projects/logicielportada.png",
-            source_code_link: "https://github.com/",
-        },
-    },
 ];
 export const navLinks = [
     {

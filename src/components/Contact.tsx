@@ -16,10 +16,63 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
     // @ts-ignore
     const handleChange = (event, type) => {
-        console.log(event.target.value)
-        console.log(type)
+
+        if (type=="name"){
+            setForm({
+                name:event.target.value,
+                email:form.email,
+                message:form.message,
+            })
+        }else if(type=="email"){
+            setForm({
+                name:form.name,
+                email:event.target.value,
+                message:form.message,
+            })
+        }else{
+            setForm({
+                name:form.name,
+                email:form.email,
+                message:event.target.value,
+            })
+        }
     }
-    const handleSubmit = () => {}
+    const handleSubmit = () => {
+        console.log(form)
+        const postData = async () => {
+
+            const url = 'https://mailservicebackend.uc.r.appspot.com/api/standardMail';
+            const data = {
+                clientName: 'Jhonatan Quihuiri',
+                name: form.name,
+                email: form.email,
+                message:form.message
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept':'*/*',
+                        'Connection':'keep-alive'
+                        // Add any additional headers here
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const result = await response.json();
+                console.log(result);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+            await postData()
+        };
+    }
     return (
         <div
             className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden"
@@ -39,14 +92,14 @@ const Contact = () => {
                     <label className="flex flex-col">
                         <span className="text-white font-medium mb-4">Your Name</span>
                         <input
-                            type="text" name="name" onChange={(event)=>handleChange(event,"Hola")} placeholder="What's your name?"
+                            type="text" name="name" onChange={(event)=>handleChange(event,"name")} placeholder="What's your name?"
                             className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                             ></input>
                     </label>
                     <label className="flex flex-col">
                         <span className="text-white font-medium mb-4">Your Email</span>
                         <input
-                            type="email" name="email" onChange={(event)=>handleChange(event,"Hola")} placeholder="What's your email?"
+                            type="email" name="email" onChange={(event)=>handleChange(event,"email")} placeholder="What's your email?"
                             className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                             ></input>
                     </label>
@@ -54,7 +107,7 @@ const Contact = () => {
                         <span className="text-white font-medium mb-4">Your Message</span>
                         <textarea
                             //@ts-ignore
-                            rows="7" name="message" onChange={(event)=>handleChange(event,"Hola")} placeholder="What do you want to say?"
+                            rows="7" name="message" onChange={(event)=>handleChange(event,"message")} placeholder="What do you want to say?"
                             className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                             ></textarea>
                     </label>

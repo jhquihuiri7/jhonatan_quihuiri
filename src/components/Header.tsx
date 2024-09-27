@@ -1,4 +1,4 @@
-
+//@ts-ignore
 import ReactTypingEffect from 'react-typing-effect';
 import {social} from '../constants/index'
 import {fadeIn} from "@/utils/motion";

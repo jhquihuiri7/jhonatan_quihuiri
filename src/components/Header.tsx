@@ -1,4 +1,4 @@
-//@ts-ignore
+
 import ReactTypingEffect from 'react-typing-effect';
 import {social} from '../constants/index'
 import {fadeIn} from "@/utils/motion";
@@ -18,14 +18,14 @@ const Header = ()=>{
             <div className="flex flex-col items-end justify-end w-full h-[32%] lg:px-32 px-4">
                 <ReactTypingEffect
                     text={["I am  Jhonatan Quihuiri"]}
-                    displayTextRenderer={(text:string, i:number) => {
+                    displayTextRenderer={(text:string) => {
                         return (
                             <h1 className="lg:text-[70px] text-[60px] font-black text-right leading-none">
-                                {text.split('  ').map((char, i) => {
+                                {text.split('  ').map((char, index) => {
                                     return (
                                         <>
-                                            <p>{(i == 0 ) ? char : ""}</p>
-                                            <span className="text-[#ed0762] mt-[-30px]">{(i == 1 ) ? char : ""}</span>
+                                            <p key={index}>{(index == 0 ) ? char : ""}</p>
+                                            <span key={index} className="text-[#ed0762] mt-[-30px]">{(index == 1 ) ? char : ""}</span>
                                         </>
                                     );
                                 })}
@@ -53,7 +53,7 @@ const Header = ()=>{
             </div>
             <motion.div  variants={fadeIn("right","",0.1,1)} className="absolute right-0 top-[250px] bg-white/[.7] h-[110px] w-[50px] rounded-l-lg flex flex-col justify-around items-center">
                 {social.map(({url,icon}, index)=>(
-                    <a href={url}><img className="h-[30px] w-[30px]" src={icon}/></a>
+                    <a href={url} key={index}><img className="h-[30px] w-[30px]" src={icon}/></a>
                 ))}
             </motion.div>
         </div>

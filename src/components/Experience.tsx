@@ -10,8 +10,8 @@ import {fadeIn, textVariant} from "@/utils/motion";
 
 
 
-const ProjectCard = ({index, name, description, tags, image, source_code_link}:
-{index:any, name:string, description:string,tags:{name:string, color:string}[],image:string, source_code_link:string})=>{
+const ProjectCard = ({index, name, description, tags, image, source_code_link, url}:
+{index:any, name:string, description:string,tags:{name:string, color:string}[],image:string, source_code_link:string, url:string})=>{
     return (
         <motion.div
             variants={fadeIn("up","spring", index * 0.5, 0.75)}
@@ -51,7 +51,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}:
                     </div>
 
                 </div>
-                <a href="">
+                <a href={url} target="_blank">
                     <div className="mt-4 flex flex-row justify-center items-center rounded-3xl h-14 bg-white">
                         <div className="w-20 m-0 text-xs text-black">Lauch or Scan</div>
                         <img
@@ -72,7 +72,8 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}:
 }
 const ExperienceCard = ({experience}:{experience:
 {icon:string, date:string, iconBg:string, company_name:string, title:string, project:{
-    name: string, description:string, tags:{name:string, color:string}[], image:string, source_code_link:string
+    name: string, description:string, tags:{name:string, color:string}[], image:string, source_code_link:string,
+    url:string
 }}})=>(
     <ProjectCard
         key={`projects-${1}`}
@@ -90,10 +91,10 @@ const Experience = () => {
                     WHAT I HAVE DONE SO FAR
                 </p>
                 <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
-                    WORK EXPERIENCE
+                    PROJECTS
                 </h2>
             </motion.div>
-            <div className='flex flex-wrap flex-col sm:flex-row justify-evenly'>
+            <div className='flex flex-wrap flex-col-reverse sm:flex-row-reverse justify-evenly'>
                 {experiences.map((experience, index) => (
                     <ExperienceCard key={index} experience={experience}/>
                 ))}

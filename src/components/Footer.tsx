@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className="flex flex-row bg-gradient-to-t from-[#031c26] from-0% to-[#08516e] to-90% rounded-xl py-3 my-3">
                         {social.map(({url,icon}, index)=>(
 
-                            <a href={url} target="_blank"><img className="h-[30px] w-[30px] mx-5 invert-0" src={icon} style={{filter:"invert(1)"}}/></a>
+                            <a href={url} target="_blank" key={index}><img className="h-[30px] w-[30px] mx-5 invert-0" src={icon} style={{filter:"invert(1)"}}/></a>
                         ))}
                     </div>
                 </div>

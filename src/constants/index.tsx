@@ -189,6 +189,7 @@ export const experiences = [
                 ],
             image: "./projects/diveevolutionportada.png",
             source_code_link: "https://github.com/jhquihuiri7/diveEvolutionBackend",
+            url: "https://github.com/",
         },
     },
     {
@@ -221,6 +222,7 @@ export const experiences = [
                 ],
             image: "./projects/gaviotaportada.png",
             source_code_link: "https://github.com/jhquihuiri7/gaviotaBackend",
+            url: "https://github.com/",
         },
     },
     {
@@ -249,6 +251,7 @@ export const experiences = [
             ],
             image: "./projects/logicielportada.png",
             source_code_link: "https://github.com/",
+            url: "https://github.com/",
         },
     },
     {
@@ -277,12 +280,13 @@ export const experiences = [
             ],
             image: "./projects/logicielportada.png",
             source_code_link: "https://github.com/",
+            url: "https://medical-dashboard-ca.uc.r.appspot.com/",
         },
     },
     {
             title: "",
             company_name: "Earthquake dashboard",
-            icon: "./projects/logicielIcon.png",
+            icon: "./projects/earthquakeIcon.png",
             iconBg: "#131a43",
             date: "",
             project: {
@@ -303,8 +307,9 @@ export const experiences = [
                         color: "pink-text-gradient",
                     },
                 ],
-                image: "./projects/logicielportada.png",
+                image: "./projects/earthquakeportada.png",
                 source_code_link: "https://github.com/",
+                url: "https://earthquake-dashboard-ca.uc.r.appspot.com/",
             },
         },
 ];

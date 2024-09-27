@@ -278,7 +278,7 @@ export const experiences = [
                     color: "pink-text-gradient",
                 },
             ],
-            image: "./projects/logicielportada.png",
+            image: "./projects/medicalportada.png",
             source_code_link: "https://github.com/",
             url: "https://medical-dashboard-ca.uc.r.appspot.com/",
         },

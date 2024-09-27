@@ -17,7 +17,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}:
             variants={fadeIn("up","spring", index * 0.5, 0.75)}
             >
             <Tilt
-                className="p-5 rounded-2xl sm:w-[360px] w-full bg-[#ffffff]/[.2]"
+                className="p-5 rounded-2xl w-[80%] mx-auto my-5 sm:w-[360px] bg-[#ffffff]/[.2]"
                 >
                 <div
                     className="relative w-full"
@@ -93,7 +93,7 @@ const Experience = () => {
                     WORK EXPERIENCE
                 </h2>
             </motion.div>
-            <div className='flex flex-row justify-evenly'>
+            <div className='flex flex-wrap flex-col sm:flex-row justify-evenly'>
                 {experiences.map((experience, index) => (
                     <ExperienceCard key={index} experience={experience}/>
                 ))}

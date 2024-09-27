@@ -72,10 +72,22 @@ export const technologies = {
             icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
         },
         {
-            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
         },
         {
-            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
+            icon:"./stack/MySQL.svg"
+        },
+        {
+            icon:"./stack/PostgresSQL.svg"
+        },
+        {
+            icon:"./stack/SQLite.svg"
+        },
+        {
+            icon:"./stack/MongoDB.svg"
+        },
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
         },
         {
             icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
@@ -85,11 +97,29 @@ export const technologies = {
         },
         {
             icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-        }
+        },
+        {
+            icon:"./stack/TypeScript.svg"
+        },
     ],
     tools:[
         {
             icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+        },
+        {
+            icon:"./stack/NumPy.svg"
+        },
+        {
+            icon:"./stack/scikit-learn.svg"
+        },
+        {
+            icon:"./stack/TensorFlow.svg"
+        },
+        {
+            icon:"./stack/OpenCV.svg"
+        },
+        {
+            icon:"./stack/Ploty.svg"
         },
         {
             icon:"https://res.cloudinary.com/logicielapplab/image/upload/v1690393645/JhonatanQuihuiri/Tech/djangoSvg_ur1bx0.svg"
@@ -102,7 +132,25 @@ export const technologies = {
         },
         {
             icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg"
-        }
+        },
+        {
+            icon:"./stack/Redis.svg"
+        },
+        {
+            icon:"./stack/Firebase.svg"
+        },
+{
+            icon:"./stack/Postman.svg"
+        },
+{
+            icon:"./stack/Google Cloud.svg"
+        },
+{
+            icon:"./stack/GitHub.svg"
+        },
+{
+            icon:"./stack/GitLab.svg"
+        },
     ],
     design:[
         {
@@ -203,6 +251,62 @@ export const experiences = [
             source_code_link: "https://github.com/",
         },
     },
+    {
+        title: "",
+        company_name: "Medical dashboard",
+        icon: "./projects/logicielIcon.png",
+        iconBg: "#131a43",
+        date: "",
+        project: {
+            name: "Medical Dashboard",
+            description:
+                "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            tags: [
+                {
+                    name: "react",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "typescript",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "frontend",
+                    color: "pink-text-gradient",
+                },
+            ],
+            image: "./projects/logicielportada.png",
+            source_code_link: "https://github.com/",
+        },
+    },
+    {
+            title: "",
+            company_name: "Earthquake dashboard",
+            icon: "./projects/logicielIcon.png",
+            iconBg: "#131a43",
+            date: "",
+            project: {
+                name: "Earthquake dashboard",
+                description:
+                    "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+                tags: [
+                    {
+                        name: "react",
+                        color: "blue-text-gradient",
+                    },
+                    {
+                        name: "typescript",
+                        color: "green-text-gradient",
+                    },
+                    {
+                        name: "frontend",
+                        color: "pink-text-gradient",
+                    },
+                ],
+                image: "./projects/logicielportada.png",
+                source_code_link: "https://github.com/",
+            },
+        },
 ];
 export const navLinks = [
     {

@@ -10,8 +10,8 @@ import {fadeIn, textVariant} from "@/utils/motion";
 
 
 
-const ProjectCard = ({index, name, description, tags, image, source_code_link, url}:
-{index:any, name:string, description:string,tags:{name:string, color:string}[],image:string, source_code_link:string, url:string})=>{
+const ProjectCard = ({index, name, description, tags, image, source_code_link, url, qr}:
+{index:any, name:string, description:string,tags:{name:string, color:string}[],image:string, source_code_link:string, url:string, qr:string})=>{
     return (
         <motion.div
             variants={fadeIn("up","spring", index * 0.5, 0.75)}
@@ -55,9 +55,9 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link, u
                     <div className="mt-4 flex flex-row justify-center items-center rounded-3xl h-14 bg-white">
                         <div className="w-20 m-0 text-xs text-black">Lauch or Scan</div>
                         <img
-                            src="./projects/github.svg"
+                            src={qr}
                             alt="github"
-                            className="h-4/5 object-contain"
+                            className="h-[100%] object-contain"
                         />
                     </div>
                 </a>
@@ -73,7 +73,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link, u
 const ExperienceCard = ({experience}:{experience:
 {icon:string, date:string, iconBg:string, company_name:string, title:string, project:{
     name: string, description:string, tags:{name:string, color:string}[], image:string, source_code_link:string,
-    url:string
+    url:string, qr:string
 }}})=>(
     <ProjectCard
         key={`projects-${1}`}

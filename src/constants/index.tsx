@@ -189,7 +189,8 @@ export const experiences = [
                 ],
             image: "./projects/diveevolutionportada.png",
             source_code_link: "https://github.com/jhquihuiri7/diveEvolutionBackend",
-            url: "https://github.com/",
+            url: "https://github.com/jhquihuiri7/diveEvolutionBackend",
+            qr:"./projects/diveevolutionbackend_qrcode.png"
         },
     },
     {
@@ -215,14 +216,11 @@ export const experiences = [
                     name: "appengine",
                     color: "pink-text-gradient",
                 },
-                {
-                    name: "backend",
-                    color: "pink-text-gradient",
-                },
                 ],
             image: "./projects/gaviotaportada.png",
             source_code_link: "https://github.com/jhquihuiri7/gaviotaBackend",
-            url: "https://github.com/",
+            url: "https://github.com/jhquihuiri7/gaviotaBackend",
+            qr:"./projects/gaviotabackend_qrcode.png"
         },
     },
     {
@@ -252,6 +250,7 @@ export const experiences = [
             image: "./projects/logicielportada.png",
             source_code_link: "https://github.com/",
             url: "https://github.com/",
+            qr:"./projects/medicaldashboard_qrcode.png"
         },
     },
     {
@@ -263,7 +262,7 @@ export const experiences = [
         project: {
             name: "Medical Dashboard",
             description:
-                "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+                "A medical dashboard displays key health data through widgets and charts, offering a clear overview for patients or providers.",
             tags: [
                 {
                     name: "react",
@@ -281,37 +280,99 @@ export const experiences = [
             image: "./projects/medicalportada.png",
             source_code_link: "https://github.com/",
             url: "https://medical-dashboard-ca.uc.r.appspot.com/",
+            qr:"./projects/medicaldashboard_qrcode.png"
         },
     },
     {
-            title: "",
-            company_name: "Earthquake dashboard",
-            icon: "./projects/earthquakeIcon.png",
-            iconBg: "#131a43",
-            date: "",
-            project: {
-                name: "Earthquake dashboard",
-                description:
-                    "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-                tags: [
-                    {
-                        name: "react",
-                        color: "blue-text-gradient",
-                    },
-                    {
-                        name: "typescript",
-                        color: "green-text-gradient",
-                    },
-                    {
-                        name: "frontend",
-                        color: "pink-text-gradient",
-                    },
-                ],
-                image: "./projects/earthquakeportada.png",
-                source_code_link: "https://github.com/",
-                url: "https://earthquake-dashboard-ca.uc.r.appspot.com/",
-            },
+        title: "",
+        company_name: "Earthquake dashboard",
+        icon: "./projects/earthquakeIcon.png",
+        iconBg: "#131a43",
+        date: "",
+        project: {
+            name: "Earthquake dashboard",
+            description:
+                "An earthquake dashboard visualizes seismic activity across different locations, offering clear analysis through interactive components.",
+            tags: [
+                {
+                    name: "react",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "typescript",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "frontend",
+                    color: "pink-text-gradient",
+                },
+            ],
+            image: "./projects/earthquakeportada.png",
+            source_code_link: "https://github.com/",
+            url: "https://earthquake-dashboard-ca.uc.r.appspot.com/",
+            qr:"./projects/earthquakedashboard_qrcode.png"
         },
+    },
+    {
+        title: "",
+        company_name: "Breast Cancer",
+        icon: "./projects/earthquakeIcon.png",
+        iconBg: "#131a43",
+        date: "",
+        project: {
+            name: "Breast Cancer",
+            description:
+                "The Wisconsin Breast Cancer dataset aids tumor classification using biopsy features, supporting early detection and predictive model development.",
+            tags: [
+                {
+                    name: "python",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "jupyter",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "data-science",
+                    color: "pink-text-gradient",
+                },
+            ],
+            image: "./projects/breastcancerportada.png",
+            source_code_link: "https://github.com/",
+            url: "https://jhonatan-quihuiri-projects.ue.r.appspot.com/breast_cancer_project/",
+            qr:"./projects/breastcancer_qrcode.png"
+        },
+    },
+    {
+        title: "",
+        company_name: "Trading 8",
+        icon: "./projects/medicaldashboard_qrcode.png",
+        iconBg: "#131a43",
+        date: "",
+        project: {
+            name: "Trading 8",
+            description:
+                "Stay updated with real-time cryptocurrency data. Access prices, charts, and trends for Bitcoin, Ethereum, etc. Track the market easily.",
+            tags: [
+                {
+                    name: "react",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "typescript",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "finantial-data",
+                    color: "pink-text-gradient",
+                },
+            ],
+            image: "./projects/trading8portada.png",
+            source_code_link: "https://github.com/",
+            url: "https://trading-8.onrender.com/",
+            qr:"./projects/trading8_qrcode.png"
+        },
+    },
 ];
 export const navLinks = [
     {

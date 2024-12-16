@@ -248,9 +248,9 @@ export const experiences = [
                 },
             ],
             image: "./projects/logicielportada.png",
-            source_code_link: "https://github.com/",
-            url: "https://github.com/",
-            qr:"./projects/medicaldashboard_qrcode.png"
+            source_code_link: "https://github.com/jhquihuiri7/logicielapplabFrontend/",
+            url: "https://logicielapplab-frontend.vercel.app/",
+            qr:"./projects/logicielapplab_qrcode.png"
         },
     },
     {
@@ -278,7 +278,7 @@ export const experiences = [
                 },
             ],
             image: "./projects/medicalportada.png",
-            source_code_link: "https://github.com/",
+            source_code_link: "https://github.com/jhquihuiri7/medical_dashboard",
             url: "https://medical-dashboard-ca.uc.r.appspot.com/",
             qr:"./projects/medicaldashboard_qrcode.png"
         },
@@ -308,7 +308,7 @@ export const experiences = [
                 },
             ],
             image: "./projects/earthquakeportada.png",
-            source_code_link: "https://github.com/",
+            source_code_link: "https://github.com/jhquihuiri7/earthquake-dashboard",
             url: "https://earthquake-dashboard-ca.uc.r.appspot.com/",
             qr:"./projects/earthquakedashboard_qrcode.png"
         },
@@ -338,7 +338,7 @@ export const experiences = [
                 },
             ],
             image: "./projects/breastcancerportada.png",
-            source_code_link: "https://github.com/",
+            source_code_link: "https://github.com/jhquihuiri7/jhonatan_projects/tree/main/breast_cancer",
             url: "https://jhonatan-quihuiri-projects.ue.r.appspot.com/breast_cancer_project/",
             qr:"./projects/breastcancer_qrcode.png"
         },
@@ -368,7 +368,7 @@ export const experiences = [
                 },
             ],
             image: "./projects/trading8portada.png",
-            source_code_link: "https://github.com/",
+            source_code_link: "https://github.com/jhquihuiri7/trading-8",
             url: "https://trading-8.onrender.com/",
             qr:"./projects/trading8_qrcode.png"
         },

@@ -373,6 +373,36 @@ export const experiences = [
             qr:"./projects/trading8_qrcode.png"
         },
     },
+    {
+        title: "",
+        company_name: "Darwin Finches Classification",
+        icon: "./projects/medicaldashboard_qrcode.png",
+        iconBg: "#131a43",
+        date: "",
+        project: {
+            name: "Darwin Finches",
+            description:
+                "This project uses an MLP to classify finches by beak traits, achieving 96% accuracy and showcasing machine learning.",
+            tags: [
+                {
+                    name: "ptyhon",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "jupyter",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "neural network",
+                    color: "pink-text-gradient",
+                },
+            ],
+            image: "./projects/darwinfinchesportada.png",
+            source_code_link: "https://github.com/jhquihuiri7/darwins_finches_beak_classification",
+            url: "https://jhonatan-quihuiri-projects.ue.r.appspot.com/darwin_finches_project/",
+            qr:"./projects/darwinfinches_qrcode.png"
+        },
+    },
 ];
 export const navLinks = [
     {

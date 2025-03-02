@@ -442,7 +442,7 @@ export const experiences = [
         project: {
             name: "Dive Evolution",
             description:
-                "This project uses an MLP to classify finches by beak traits, achieving 96% accuracy and showcasing machine learning.",
+                "Developed a responsive website for web and mobile, showcasing tours, courses, and information for a Galápagos dive agency.",
             tags: [
                 {
                     name: "nextjs",

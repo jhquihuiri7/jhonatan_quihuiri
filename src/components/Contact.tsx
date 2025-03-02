@@ -2,9 +2,12 @@
 import {useState, useRef} from 'react';
 import {motion } from 'framer-motion';
 
+import dynamic from "next/dynamic";
 import {EarthCanvas} from './canvas';
 import {SectionWrapper} from '@/wrapper';
 import {slideIn} from '@/utils/motion';
+
+//const Earth = dynamic(() => import("./Earth"), { ssr: false });
 
 const Contact = () => {
     const formRef = useRef();

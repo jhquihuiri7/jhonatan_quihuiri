@@ -403,6 +403,66 @@ export const experiences = [
             qr:"./projects/darwinfinches_qrcode.png"
         },
     },
+    {
+        title: "",
+        company_name: "Market Operation Dashboard",
+        icon: "./projects/medicaldashboard_qrcode.png",
+        iconBg: "#131a43",
+        date: "",
+        project: {
+            name: "Market Operation",
+            description:
+                "This project made with plotly is a dashboard that enables users to interact with market stocks, visualize trends, and analyze data.",
+            tags: [
+                {
+                    name: "ptyhon",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "plotly",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "flask",
+                    color: "pink-text-gradient",
+                },
+            ],
+            image: "./projects/marketoperationportada.png",
+            source_code_link: "https://github.com/jhquihuiri7/abeed-project",
+            url: "https://market-operation-dashboard.uc.r.appspot.com/home?session_flag=restore",
+            qr:"./projects/marketoperation_qrcode.png"
+        },
+    },
+    {
+        title: "",
+        company_name: "Darwin Finches Classification",
+        icon: "./projects/medicaldashboard_qrcode.png",
+        iconBg: "#131a43",
+        date: "",
+        project: {
+            name: "Dive Evolution",
+            description:
+                "This project uses an MLP to classify finches by beak traits, achieving 96% accuracy and showcasing machine learning.",
+            tags: [
+                {
+                    name: "nextjs",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "frontend",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "typescript",
+                    color: "pink-text-gradient",
+                },
+            ],
+            image: "./projects/diveevolutionrecreatedportada.png",
+            source_code_link: "https://github.com/jhquihuiri7/dive_evolution_website",
+            url: "https://dive-evolution-website.vercel.app/",
+            qr:"./projects/diveevolutionrecreated_qrcode.png"
+        },
+    }
 ];
 export const navLinks = [
     {

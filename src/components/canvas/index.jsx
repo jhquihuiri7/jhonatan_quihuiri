@@ -1,4 +1,8 @@
 import ComputersCanvas from "./Computers";
-import EarthCanvas from "./Earth";
+
+import dynamic from "next/dynamic";
+
+const EarthCanvas = dynamic(() => import("./Earth"), { ssr: false });
+//import EarthCanvas from "./Earth";
 
 export { ComputersCanvas, EarthCanvas};

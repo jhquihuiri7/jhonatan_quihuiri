@@ -479,17 +479,17 @@ export const navLinks = [
 ]
 export const services = [
     {
-        title: "Data Analyst",
+        title: "Data Scientist",
         icon: "./about/dataIcon.png",
     },
     {
         title: "Backend Developer",
         icon: "./about/serverIcon.png",
     },
-    {
-        title: "Mobile Development",
-        icon: "./about/phoneIcon.png",
-    },
+    //{
+    //    title: "Mobile Development",
+    //    icon: "./about/phoneIcon.png",
+    //},
 ];
 export const social = [
     {

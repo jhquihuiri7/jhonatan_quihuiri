@@ -6,8 +6,14 @@ import dynamic from "next/dynamic";
 import {EarthCanvas} from './canvas';
 import {SectionWrapper} from '@/wrapper';
 import {slideIn} from '@/utils/motion';
+import nodemailer from "nodemailer";
 
 //const Earth = dynamic(() => import("./Earth"), { ssr: false });
+type FormType = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 const Contact = () => {
     const formRef = useRef();
@@ -40,42 +46,23 @@ const Contact = () => {
             })
         }
     }
-    const handleSubmit = () => {
-        console.log(form)
-        const postData = async () => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault(); // prevent page reload
+        setLoading(true);
 
-            const url = 'https://mailservicebackend.uc.r.appspot.com/api/standardMail';
-            const data = {
-                clientName: 'Jhonatan Quihuiri',
-                name: form.name,
-                email: form.email,
-                message:form.message
-            };
-
-            try {
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept':'*/*',
-                        'Connection':'keep-alive'
-                        // Add any additional headers here
-                    },
-                    body: JSON.stringify(data),
-                });
-
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-
-                const result = await response.json();
-                console.log(result);
-            } catch (error) {
-                console.error('Error:', error);
-            }
-            await postData()
-        };
-    }
+        try {
+            const res = await fetch("/api/sendEmail", {
+                method: "POST",
+                body: JSON.stringify(form),
+            });
+            const data = await res.json();
+            console.log("DATA: ",data);
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoading(false);
+        }
+    };
     return (
         <div
             className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden"

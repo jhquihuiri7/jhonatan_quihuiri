@@ -7,14 +7,12 @@ export async function POST(req: NextRequest) {
   try {
     const { name, email, message } = await req.json();
 
-    const testAccount = await nodemailer.createTestAccount();
     const transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: false,
+
+      service: "gmail",
       auth: {
-        user: testAccount.user,
-        pass: testAccount.pass,
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
       },
     });
 
@@ -22,7 +20,7 @@ export async function POST(req: NextRequest) {
     let htmlContent = fs.readFileSync(filePath, "utf-8");
 
     const info = await transporter.sendMail({
-      from: `"Jhonatan Quihuiri" <${testAccount.user}>`,
+      from: `"Jhonatan Quihuiri" <jhonatan.quihuiri@gmail.com>`,
       to: email,
       subject: "Message received | Will reply soon",
       text: message,

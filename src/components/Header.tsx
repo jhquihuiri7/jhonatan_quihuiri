@@ -7,7 +7,7 @@ import React from 'react';
 const Header = ()=>{
 
     return(
-        <div className="w-full h-screen static">
+        <div className="w-full h-screen static text-white">
             <div className="flex flex-col items-start justify-start lg:p-32  py-16 px-8 w-full h-[45%]">
                 <p className="lg:text-[130px] text-[110px] font-black">
                     HE

@@ -22,7 +22,7 @@ const Footer = () => {
                         ))}
                     </div>
                 </div>
-                <span className="text-black text-[14px]">Desarrollado por <strong className="text-[#08516e]">Jhonatan Quihuiri</strong></span>
+                <span className="text-black text-[14px]">Developed by <strong className="text-[#08516e]">Jhonatan Quihuiri</strong></span>
                 <Tilt className="xl:w-[880px] w-[93%] mt-3">
                     <motion.div
                         variants={fadeIn("rigth","spring",0.5, 0.75)}

@@ -1,5 +1,5 @@
 'use client'
-import {useState, useRef} from 'react';
+import {useState, useRef, useEffect} from 'react';
 import {motion } from 'framer-motion';
 
 import dynamic from "next/dynamic";
@@ -7,6 +7,7 @@ import {EarthCanvas} from './canvas';
 import {SectionWrapper} from '@/wrapper';
 import {slideIn} from '@/utils/motion';
 import nodemailer from "nodemailer";
+import { toast } from "sonner"
 
 //const Earth = dynamic(() => import("./Earth"), { ssr: false });
 type FormType = {
@@ -16,16 +17,23 @@ type FormType = {
 };
 
 const Contact = () => {
-    const formRef = useRef();
+    const formRef = useRef<HTMLFormElement>();
     const [form, setForm] = useState({
         name:'',
         email:'',
         message:'',
     })
+    const [isFormValid, setIsFormValid] = useState(false);
     const [loading, setLoading] = useState(false);
+    
+    // Check if all form fields have values
+    useEffect(() => {
+        const { name, email, message } = form;
+        setIsFormValid(name.trim() !== '' && email.trim() !== '' && message.trim() !== '');
+    }, [form]);
+    
     // @ts-ignore
     const handleChange = (event, type) => {
-
         if (type=="name"){
             setForm({
                 name:event.target.value,
@@ -46,8 +54,13 @@ const Contact = () => {
             })
         }
     }
+    
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // prevent page reload
+        
+        // Double check form validity before submitting
+        if (!isFormValid) return;
+        
         setLoading(true);
 
         try {
@@ -55,14 +68,26 @@ const Contact = () => {
                 method: "POST",
                 body: JSON.stringify(form),
             });
-            const data = await res.json();
-            console.log("DATA: ",data);
+            if (res.ok) {
+                setForm({
+                    name:'',
+                    email:'',
+                    message:'',
+                })
+                if (formRef.current) {
+                    formRef.current.reset();
+                }
+                toast("Email sent successfully")
+            }else {
+                toast("Error sending email, try again.")
+            }
         } catch (error) {
             console.error(error);
         } finally {
             setLoading(false);
         }
     };
+    
     return (
         <div
             className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden"
@@ -101,7 +126,13 @@ const Contact = () => {
                             className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                             ></textarea>
                     </label>
-                    <button type="submit" className="bg-gradient-to-tr from-[#882afa] from-0% to-[#ffa0d8] to-90% py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl">
+                    <button 
+                        type="submit" 
+                        disabled={!isFormValid || loading}
+                        className={`bg-gradient-to-tr from-[#882afa] from-0% to-[#ffa0d8] to-90% py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl ${
+                            !isFormValid || loading ? 'opacity-50 cursor-not-allowed' : 'hover:opacity-90'
+                        }`}
+                    >
                         {loading ? "Sending..." : "Send"}
                     </button>
                 </form>

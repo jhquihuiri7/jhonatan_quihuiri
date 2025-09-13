@@ -1,7 +1,6 @@
 'use client'
 //@ts-ignore
 import  {motion} from 'framer-motion'
-import 'react-vertical-timeline-component/style.min.css'
 import {experiences} from '@/constants'
 import {SectionWrapper} from '../wrapper/index'
 import React from "react";

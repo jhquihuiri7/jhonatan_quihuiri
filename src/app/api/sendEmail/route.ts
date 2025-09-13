@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
 
   const info = await transporter.sendMail({
     //from: `"${name}" <${email}>`,
-    from: `"${name}" <${testAccount.user}>`,
+    from: `"Jhonatan Quihuiri" <${testAccount.user}>`,
     to: email,
     subject: "Message received | Will reply soon",
     text: message,

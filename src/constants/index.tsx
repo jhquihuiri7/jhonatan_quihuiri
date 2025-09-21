@@ -462,6 +462,66 @@ export const experiences = [
             url: "https://dive-evolution-website.vercel.app/",
             qr:"./projects/diveevolutionrecreated_qrcode.png"
         },
+    },
+    {
+        title: "",
+        company_name: "SciBot",
+        icon: "./projects/medicaldashboard_qrcode.png",
+        iconBg: "#131a43",
+        date: "",
+        project: {
+            name: "SciBot",
+            description:
+                "AI tool that summarizes scientific documents with NLP/OCR and chatbot, aiding Ecuadorian researchers’ efficient literature review.",
+            tags: [
+                {
+                    name: "chatbot",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "frontend",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "backend",
+                    color: "pink-text-gradient",
+                },
+            ],
+            image: "./projects/diveevolutionrecreatedportada.png",
+            source_code_link: "https://github.com/jhquihuiri7/sci-bot-backend",
+            url: "https://github.com/jhquihuiri7/scib-bot",
+            qr:"./projects/diveevolutionrecreated_qrcode.png"
+        },
+    },
+    {
+        title: "",
+        company_name: "Easy Ferry",
+        icon: "./projects/medicaldashboard_qrcode.png",
+        iconBg: "#131a43",
+        date: "",
+        project: {
+            name: "Easy Ferry",
+            description:
+                "EasyFerry automates ferry operations—bookings, schedules, payments, reporting—boosting efficiency, reducing errors, and improving customer service.",
+            tags: [
+                {
+                    name: "db",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "frontend",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "backend",
+                    color: "pink-text-gradient",
+                },
+            ],
+            image: "./projects/diveevolutionrecreatedportada.png",
+            source_code_link: "https://github.com/jhquihuiri7/easy-ferry-backend",
+            url: "https://github.com/jhquihuiri7/easy-ferry",
+            qr:"./projects/diveevolutionrecreated_qrcode.png"
+        },
     }
 ];
 export const navLinks = [
@@ -499,11 +559,11 @@ export const social = [
     {
         url: "https://www.linkedin.com/in/jhquihuiri7/",
         icon: "./social/linkedin.svg",
-    },
-    {
-        url: "https://www.instagram.com/jhquihuiri7/",
-        icon: "./social/instagram.svg",
-    },
+    }//,
+    //{
+    //    url: "https://www.instagram.com/jhquihuiri7/",
+    //    icon: "./social/instagram.svg",
+    //},
 ];
 export const styles = {
     paddingX: "px-6 sm:px-16",

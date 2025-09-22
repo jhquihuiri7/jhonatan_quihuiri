@@ -487,10 +487,10 @@ export const experiences = [
                     color: "pink-text-gradient",
                 },
             ],
-            image: "./projects/diveevolutionrecreatedportada.png",
+            image: "./projects/scibotportada.png",
             source_code_link: "https://github.com/jhquihuiri7/sci-bot-backend",
             url: "https://github.com/jhquihuiri7/scib-bot",
-            qr:"./projects/diveevolutionrecreated_qrcode.png"
+            qr:"./projects/scibot_qrcode.png"
         },
     },
     {
@@ -517,10 +517,10 @@ export const experiences = [
                     color: "pink-text-gradient",
                 },
             ],
-            image: "./projects/diveevolutionrecreatedportada.png",
+            image: "./projects/easyferryportada.png",
             source_code_link: "https://github.com/jhquihuiri7/easy-ferry-backend",
             url: "https://github.com/jhquihuiri7/easy-ferry",
-            qr:"./projects/diveevolutionrecreated_qrcode.png"
+            qr:"./projects/easyferry_qrcode.png"
         },
     }
 ];

@@ -467,9 +467,14 @@ export const navLinks = [
         title:"About"
     },
     {
+        id:"projects",
+        title:"Projects"
+    },
+    {
         id:"work",
         title:"Work"
-    },{
+    },
+    {
         id:"contact",
         title:"Contact"
     }
@@ -519,36 +524,44 @@ export const styles = {
 }
 export const jobs: JobTimelineType = [
   {
-    year: 2023,
-    company: "TechCorp Inc.",
-    role: "Senior Frontend Developer",
-    duration: "2023 - Present",
+    year: 2025,
+    company: "Zenovo",
+    role: "Backend Consultant",
+    duration: "2025 - Present",
     isCurrent: true,
-    description: "Leading frontend development for enterprise SaaS products",
-    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS"]
+    description: "Delivered scalable backend and data solutions, dashboards, and APIs, enhancing operations for diverse global clients.",
+    skills: ["Python", "Firebase", "Google Cloud Platform", "ML models"]
+  },
+  {
+    year: 2024,
+    company: "Upwork",
+    role: "Backend and Data Science Freelancer",
+    duration: "2024 - 2025",
+    description: "Delivered scalable backend and data solutions, dashboards, and APIs, enhancing operations for diverse global clients.",
+    skills: ["Python", "Plotly", "Econometrics", "AI training"]
+  },
+  {
+    year: 2024,
+    company: "Help Us Defend",
+    role: "Backend Developer Volunteer",
+    duration: "2024 - 2025",
+    description: "Developed and optimized APIs for a secure dating app, improving performance and real-time user interactions.",
+    skills: ["Python", "MySQL", "Redis", "MinIO"]
   },
   {
     year: 2021,
-    company: "StartupXYZ",
-    role: "Full Stack Developer",
+    company: "Logiciel Applab",
+    role: "Backend Developer",
     duration: "2021 - 2023",
-    description: "Developed and maintained web applications for fast-growing startup",
-    skills: ["React", "Node.js", "MongoDB", "AWS"]
+    description: "Developed booking platforms, APIs, and automated services for tourism and hospitality businesses.",
+    skills: ["Golang", "Python", "Dart", "MongoDB"]
   },
   {
     year: 2019,
-    company: "Digital Solutions Ltd.",
-    role: "Frontend Developer",
-    duration: "2019 - 2021",
-    description: "Built responsive web interfaces for various client projects",
-    skills: ["JavaScript", "Vue.js", "CSS3", "HTML5"]
-  },
-  {
-    year: 2017,
-    company: "WebDev Agency",
-    role: "Junior Web Developer",
-    duration: "2017 - 2019",
-    description: "Started career developing websites and small web applications",
-    skills: ["HTML5", "CSS3", "JavaScript", "jQuery"]
+    company: "Diners Club",
+    role: "Collections Data Intern",
+    duration: "2019 - 2020",
+    description: "Managed databases, analyzed recovery campaigns, migrated data to R, and improved financial reporting accuracy.",
+    skills: ["Python", "R","Linux", "MySQL"]
   }
 ];

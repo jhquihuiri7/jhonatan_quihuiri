@@ -1,68 +1,5 @@
-export const projects = [
-    {
-        name: "Car Rent",
-        description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-        tags: [
-            {
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "mongodb",
-                color: "green-text-gradient",
-            },
-            {
-                name: "tailwind",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: "./assets/backend.png",
-        source_code_link: "https://github.com/",
-    },
-    {
-        name: "Job IT",
-        description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-        tags: [
-            {
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "restapi",
-                color: "green-text-gradient",
-            },
-            {
-                name: "scss",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: "./assets/backend.png",
-        source_code_link: "https://github.com/",
-    },
-    {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-        tags: [
-            {
-                name: "nextjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "supabase",
-                color: "green-text-gradient",
-            },
-            {
-                name: "css",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: "./assets/backend.png",
-        source_code_link: "https://github.com/",
-    },
-];
+import { JobTimelineType } from '@/types/events';
+
 export const technologies = {
     langages:[
         {
@@ -580,3 +517,38 @@ export const styles = {
     sectionSubText:
         "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
 }
+export const jobs: JobTimelineType = [
+  {
+    year: 2023,
+    company: "TechCorp Inc.",
+    role: "Senior Frontend Developer",
+    duration: "2023 - Present",
+    isCurrent: true,
+    description: "Leading frontend development for enterprise SaaS products",
+    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS"]
+  },
+  {
+    year: 2021,
+    company: "StartupXYZ",
+    role: "Full Stack Developer",
+    duration: "2021 - 2023",
+    description: "Developed and maintained web applications for fast-growing startup",
+    skills: ["React", "Node.js", "MongoDB", "AWS"]
+  },
+  {
+    year: 2019,
+    company: "Digital Solutions Ltd.",
+    role: "Frontend Developer",
+    duration: "2019 - 2021",
+    description: "Built responsive web interfaces for various client projects",
+    skills: ["JavaScript", "Vue.js", "CSS3", "HTML5"]
+  },
+  {
+    year: 2017,
+    company: "WebDev Agency",
+    role: "Junior Web Developer",
+    duration: "2017 - 2019",
+    description: "Started career developing websites and small web applications",
+    skills: ["HTML5", "CSS3", "JavaScript", "jQuery"]
+  }
+];

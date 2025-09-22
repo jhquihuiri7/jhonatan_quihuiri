@@ -529,7 +529,7 @@ export const jobs: JobTimelineType = [
     role: "Backend Consultant",
     duration: "2025 - Present",
     isCurrent: true,
-    description: "Delivered scalable backend and data solutions, dashboards, and APIs, enhancing operations for diverse global clients.",
+    description: "Consulted on backend and mobile applications, enhancing reliability, scalability, and performance through cross-team collaboration.",
     skills: ["Python", "Firebase", "Google Cloud Platform", "ML models"]
   },
   {

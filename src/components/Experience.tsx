@@ -25,6 +25,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link, u
                     <div
                         className="absolute inset-0 flex justify-end card-img_hover"
                         >
+                        {source_code_link && (
                         <div
                             onClick={() => window.open(source_code_link,"_blank")}
                             className="bg-gradient-to-tr from-[#fc4738] from-0% to-[#ff7831] to-90% w-10 h-10 rounded-full flex justify-center items-center cursor-pointer m-3"
@@ -35,6 +36,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link, u
                                 className="w-1/2 h-1/2 object-contain"
                             />
                         </div>
+                        )}
                     </div>
                 </div>
                 <div className="mt-5 flex flex-row gap-2">
@@ -50,16 +52,18 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link, u
                     </div>
 
                 </div>
+                {url && qr && (
                 <a href={url} target="_blank">
                     <div className="mt-4 flex flex-row justify-center items-center rounded-3xl h-14 bg-white">
-                        <div className="w-20 m-0 text-xs text-black">Lauch or Scan</div>
+                        <div className="w-20 m-0 text-xs text-black">Launch or Scan</div>
                         <img
                             src={qr}
-                            alt="github"
+                            alt="QR code"
                             className="h-[100%] object-contain"
                         />
                     </div>
                 </a>
+                )}
                 <div className="mt-4 flex flex-wrap justify-around gap-2">
                     {tags.map((tag)=>(
                         <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
@@ -93,7 +97,7 @@ const Experience = () => {
                     PROJECTS
                 </h2>
             </motion.div>
-            <div className='flex flex-wrap flex-col-reverse sm:flex-row-reverse justify-evenly'>
+            <div className='flex flex-wrap flex-col sm:flex-row justify-evenly'>
                 {experiences.map((experience, index) => (
                     <ExperienceCard key={index} experience={experience}/>
                 ))}

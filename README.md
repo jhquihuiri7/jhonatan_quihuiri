@@ -1,50 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jhonatan Quihuiri — Portfolio
 
-## Getting Started
+Personal portfolio of **Jhonatan Quihuiri**, Backend Developer and Data Scientist based in the Galápagos Islands, Ecuador.
 
-First, run the development server:
+Live site: https://jhonatan-quihuiri.vercel.app
+
+## Sections
+
+- **About:** profile overview and services.
+- **My Stack:** languages and tools.
+- **Projects:** project cards with live links and QR codes.
+- **Work:** timeline of professional experience.
+- **Contact:** contact form that sends an automatic reply by email.
+
+## Editing the content
+
+All the portfolio content (stack icons, projects and the work timeline) lives in `src/constants/index.tsx`.
+In a project card, leave `url` and `qr` empty to hide the "Launch or Scan" button, and leave `source_code_link`
+empty to hide the GitHub button (for private repositories).
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. The project's `.npmrc` enables `legacy-peer-deps`, which the current dependency
+set needs to install cleanly.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The contact form needs the `GMAIL_USER` and `GMAIL_PASS` environment variables.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Stack
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-
-
-Mi nombres es Jhonatan Quihuiri, soy un apasionado por el desarrollo.
-
-Nombre: Jhonatan Quihuri
-Passion: Desarrollo de software
-Areas: Desarrollo Backend, Data Analysis, Desarrollo Movil
-
-Te invito a que explores mi portafolio y conozcas mas sobre mi.
-
-
-Con la siguiente informacion, escribe un overview de mi perfil en ingles para mi portafolio como desarrollador, estedebe contener la informacion siguiente, recuerda utilzar un lenguaje que llamen la atencion del lector:
-
-
-
+Next.js 13 (App Router), React, TypeScript, Tailwind CSS, Framer Motion, Three.js / Vanta and Nodemailer.

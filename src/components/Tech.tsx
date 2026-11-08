@@ -26,11 +26,6 @@ const Tech = () => {
           <img key={index} src={tool.icon} style={{height: 80 + 'px',width: 80 + 'px'}}/>
       ))}
     </div>
-      <div className="flex flex-row flex-wrap justify-center gap-10 py-6">
-        {technologies.design.map((tool, index)=>(
-            <img key={index} src={tool.icon} style={{height: 80 + 'px',width: 80 + 'px'}}/>
-        ))}
-      </div>
     </>
   )
 }

@@ -6,8 +6,8 @@ import { Toaster } from "@/components/ui/sonner"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Jhonatan Quihuiri',
-  description: 'Welcome to my developer portfolio! I am a passionate and dedicated professional with expertise in backend development, mobile app development, and data analysis. The world of finance, trading, programming, and data fuels my curiosity and drives me to excel in my academic and professional responsibilities.',
+  title: 'Jhonatan Quihuiri | Backend Developer & Data Scientist',
+  description: 'Backend Developer and Data Scientist in the Galápagos Islands: GIS platforms at the Governing Council of Galápagos (CGREG), founder of Logiciel AppLab (Wego, Zero), and MSc in Data Science and Machine Learning.',
 
 }
 

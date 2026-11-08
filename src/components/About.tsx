@@ -38,11 +38,13 @@ const About = () => {
           variants={fadeIn("","",0.1,1)}
           className="mt-4 text-secondary text-[17px] max-w-3l leadeing-[30px] sm:px-10 px-5"
       >
-          Welcome to my developer portfolio! I am a passionate and dedicated professional with expertise in backend
-          development, mobile app development, and data analysis. The world of finance, trading, programming, and data
-          fuels my curiosity and drives me to excel in my academic and professional responsibilities. I invite you to
-          explore my portfolio to witness my problem-solving abilities and the impact I have made across various domains.
-          Let's connect and discuss!
+          I&apos;m a Backend Developer and Data Scientist with 5+ years of experience building APIs, GIS platforms, and data
+          analytics for the public, tourism, and financial sectors. At the Governing Council of Galápagos (CGREG), I build
+          and run SIGTAR, the council&apos;s GIS-based territorial information system. I&apos;m also the founder of Logiciel
+          AppLab, the company behind Wego, a ride-hailing app live on the App Store and Google Play, and Zero, an AI
+          sports-broadcasting system I co-founded that is about to launch. I hold an MSc in Data Science and Machine
+          Learning, studied economics in Ecuador and France, won 2nd place at the NASA Space Apps Challenge 2025 in
+          San Cristóbal, and work in Spanish, English, and French. Let&apos;s connect!
       </motion.p>
       <div className="mt-20 flex flex-wrap justify-center gap-10 sm:px-10 px-5">
           {services.map((service, index) =>(

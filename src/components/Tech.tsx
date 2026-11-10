@@ -1,33 +1,40 @@
-'use client'
-import React from 'react'
-import {SectionWrapper} from "@/wrapper";
-import {textVariant} from "@/utils/motion";
-import {motion} from "framer-motion";
-import {technologies} from '@/constants';
+import { skillGroups } from "@/constants";
+import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
-const Tech = () => {
+export default function Tech() {
   return (
-    <>
-    <motion.div variants={textVariant(0.1)} className="sm:px-10 px-5">
-      <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
-        WHAT DO I USE
-      </p>
-      <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
-        MY STACK
-      </h2>
-    </motion.div>
-    <div className="flex flex-row flex-wrap justify-center gap-10 py-6">
-      {technologies.langages.map((language, index)=>(
-          <img key={index} src={language.icon} style={{height: 80 + 'px',width: 80 + 'px'}}/>
-      ))}
-    </div>
-    <div className="flex flex-row flex-wrap justify-center gap-10 py-6">
-      {technologies.tools.map((tool, index)=>(
-          <img key={index} src={tool.icon} style={{height: 80 + 'px',width: 80 + 'px'}}/>
-      ))}
-    </div>
-    </>
-  )
-}
+    <section
+      id="tech"
+      aria-labelledby="tech-title"
+      className="mx-auto max-w-[1200px] scroll-mt-20 px-5 pt-[clamp(64px,8vw,112px)] sm:px-10"
+    >
+      <SectionHeading eyebrow="What do I use" title="MY STACK" id="tech-title" />
 
-export default SectionWrapper(Tech,"tech")
+      <div className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(min(340px,100%),1fr))] gap-5">
+        {skillGroups.map((group, index) => (
+          <Reveal
+            key={group.title}
+            delay={0.05 * (index % 3)}
+            className="flex flex-col gap-4 rounded-[18px] border border-white/[0.08] bg-night-900 p-6"
+          >
+            <h3 className="flex items-center gap-2.5 text-base font-bold">
+              <span aria-hidden="true" className="h-2 w-2 rounded-full bg-brand-purple" />
+              {group.title}
+            </h3>
+            <ul className="flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <li
+                  key={skill}
+                  className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-[13.5px] text-lilac-100"
+                >
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}

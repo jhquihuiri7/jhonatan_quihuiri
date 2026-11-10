@@ -1,150 +1,156 @@
-'use client'
-import {useState, useRef, useEffect} from 'react';
-import {motion } from 'framer-motion';
+"use client";
 
-import dynamic from "next/dynamic";
-import {EarthCanvas} from './canvas';
-import {SectionWrapper} from '@/wrapper';
-import {slideIn} from '@/utils/motion';
-import nodemailer from "nodemailer";
-import { toast } from "sonner"
+import { useState, type ChangeEvent, type FormEvent } from "react";
+import { toast } from "sonner";
+import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
-//const Earth = dynamic(() => import("./Earth"), { ssr: false });
-type FormType = {
+type FormState = {
   name: string;
   email: string;
   message: string;
 };
 
-const Contact = () => {
-    const formRef = useRef<HTMLFormElement>();
-    const [form, setForm] = useState({
-        name:'',
-        email:'',
-        message:'',
-    })
-    const [isFormValid, setIsFormValid] = useState(false);
-    const [loading, setLoading] = useState(false);
-    
-    // Check if all form fields have values
-    useEffect(() => {
-        const { name, email, message } = form;
-        setIsFormValid(name.trim() !== '' && email.trim() !== '' && message.trim() !== '');
-    }, [form]);
-    
-    // @ts-ignore
-    const handleChange = (event, type) => {
-        if (type=="name"){
-            setForm({
-                name:event.target.value,
-                email:form.email,
-                message:form.message,
-            })
-        }else if(type=="email"){
-            setForm({
-                name:form.name,
-                email:event.target.value,
-                message:form.message,
-            })
-        }else{
-            setForm({
-                name:form.name,
-                email:form.email,
-                message:event.target.value,
-            })
-        }
-    }
-    
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault(); // prevent page reload
-        
-        // Double check form validity before submitting
-        if (!isFormValid) return;
-        
-        setLoading(true);
+const EMPTY_FORM: FormState = { name: "", email: "", message: "" };
 
-        try {
-            const res = await fetch("/api/sendEmail", {
-                method: "POST",
-                body: JSON.stringify(form),
-            });
-            if (res.ok) {
-                setForm({
-                    name:'',
-                    email:'',
-                    message:'',
-                })
-                if (formRef.current) {
-                    formRef.current.reset();
-                }
-                toast("Email sent successfully")
-            }else {
-                toast("Error sending email, try again.")
-            }
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setLoading(false);
-        }
-    };
-    
-    return (
-        <div
-            className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden"
+const FIELD_CLASS =
+  "w-full rounded-xl border border-white/[0.14] bg-night-800 px-[18px] text-[15px] text-white transition-colors focus:border-brand-rose/70 focus:outline-none";
+
+export default function Contact() {
+  const [form, setForm] = useState<FormState>(EMPTY_FORM);
+  const [loading, setLoading] = useState(false);
+
+  const isValid = Object.values(form).every((value) => value.trim() !== "");
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setForm((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!isValid || loading) return;
+
+    setLoading(true);
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (response.ok) {
+        setForm(EMPTY_FORM);
+        toast.success("Email sent successfully");
+      } else {
+        toast.error("Error sending email, try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Error sending email, try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <section
+      id="contact"
+      aria-labelledby="contact-title"
+      className="mx-auto max-w-[1200px] scroll-mt-20 px-5 pt-[clamp(64px,8vw,112px)] sm:px-10"
+    >
+      <div className="flex flex-wrap items-stretch gap-10">
+        <Reveal className="flex min-w-0 flex-[1_1_520px] flex-col gap-7 rounded-3xl border border-white/[0.08] bg-night-900 p-[clamp(24px,4vw,44px)]">
+          <SectionHeading eyebrow="Get in touch" title="Contact" id="contact-title" />
+
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <div className="flex flex-col gap-2.5">
+              <label htmlFor="contact-name" className="text-[15px] font-medium">
+                Your Name
+              </label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                autoComplete="name"
+                required
+                value={form.name}
+                onChange={handleChange}
+                placeholder="What's your name?"
+                className={`${FIELD_CLASS} h-[52px]`}
+              />
+            </div>
+            <div className="flex flex-col gap-2.5">
+              <label htmlFor="contact-email" className="text-[15px] font-medium">
+                Your Email
+              </label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                value={form.email}
+                onChange={handleChange}
+                placeholder="What's your email?"
+                className={`${FIELD_CLASS} h-[52px]`}
+              />
+            </div>
+            <div className="flex flex-col gap-2.5">
+              <label htmlFor="contact-message" className="text-[15px] font-medium">
+                Your Message
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows={6}
+                required
+                value={form.message}
+                onChange={handleChange}
+                placeholder="What do you want to say?"
+                className={`${FIELD_CLASS} resize-y py-3.5 leading-relaxed`}
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={!isValid || loading}
+              className="min-h-[48px] self-start rounded-xl bg-gradient-to-br from-brand-violet to-brand-rose px-9 text-[15px] font-bold text-white transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:brightness-100"
             >
-            <motion.div
-                variants={slideIn('left',"tween",0.2,1)}
-                className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
-                >
-                <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">Get in touch</p>
-                <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact</h2>
-                <form
-                    //@ts-ignore
-                    ref={formRef}
-                    onSubmit={handleSubmit}
-                    className="mt-12 flex flex-col gap-8 bg-white/[.7] xl:px-12 px-5 py-5 rounded-xl"
-                    >
-                    <label className="flex flex-col">
-                        <span className="text-white font-medium mb-4">Your Name</span>
-                        <input
-                            type="text" name="name" onChange={(event)=>handleChange(event,"name")} placeholder="What's your name?"
-                            className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
-                            ></input>
-                    </label>
-                    <label className="flex flex-col">
-                        <span className="text-white font-medium mb-4">Your Email</span>
-                        <input
-                            type="email" name="email" onChange={(event)=>handleChange(event,"email")} placeholder="What's your email?"
-                            className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
-                            ></input>
-                    </label>
-                    <label className="flex flex-col">
-                        <span className="text-white font-medium mb-4">Your Message</span>
-                        <textarea
-                            //@ts-ignore
-                            rows="7" name="message" onChange={(event)=>handleChange(event,"message")} placeholder="What do you want to say?"
-                            className="bg-[#3b4b8b] py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
-                            ></textarea>
-                    </label>
-                    <button 
-                        type="submit" 
-                        disabled={!isFormValid || loading}
-                        className={`bg-gradient-to-tr from-[#882afa] from-0% to-[#ffa0d8] to-90% py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl ${
-                            !isFormValid || loading ? 'opacity-50 cursor-not-allowed' : 'hover:opacity-90'
-                        }`}
-                    >
-                        {loading ? "Sending..." : "Send"}
-                    </button>
-                </form>
-            </motion.div>
-            <motion.div
-                variants={slideIn('rigth',"tween",0.2,1)}
-                className="xl:flex-1"
-                >
-                <EarthCanvas></EarthCanvas>
-            </motion.div>
-        </div>
-    )
+              {loading ? "Sending..." : "Send"}
+            </button>
+          </form>
+        </Reveal>
+
+        <Reveal
+          delay={0.15}
+          className="relative flex min-h-[380px] min-w-0 flex-[1_1_360px] flex-col items-center justify-center gap-7"
+        >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-[46%] aspect-square w-[460px] max-w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(79,124,255,0.32),rgba(79,124,255,0))]"
+          />
+          {/* Globe illustration with a marker on the Galápagos */}
+          <div
+            role="img"
+            aria-label="Globe with a marker on the Galápagos Islands"
+            className="globe relative aspect-square w-[min(340px,80%)] overflow-hidden rounded-full"
+          >
+            <span aria-hidden="true" className="absolute inset-x-0 top-1/2 h-px bg-white/[0.16]" />
+            <span aria-hidden="true" className="absolute inset-x-[-10%] top-[26%] h-[48%] rounded-full border border-white/[0.14]" />
+            <span aria-hidden="true" className="absolute inset-x-[10%] top-[12%] h-[76%] rounded-full border border-white/10" />
+            <span aria-hidden="true" className="absolute inset-y-0 left-1/2 w-px bg-white/[0.16]" />
+            <span aria-hidden="true" className="absolute inset-y-[-10%] left-[28%] w-[44%] rounded-full border border-white/[0.14]" />
+            <span aria-hidden="true" className="absolute inset-y-0 left-[12%] w-[76%] rounded-full border border-white/10" />
+            <span
+              aria-hidden="true"
+              className="absolute left-[36%] top-[53%] h-3 w-3 rounded-full bg-brand-pink shadow-[0_0_0_6px_rgba(237,7,98,0.25),0_0_18px_rgba(237,7,98,0.8)]"
+            />
+          </div>
+          <p className="relative inline-flex items-center gap-2.5 rounded-full border border-white/[0.12] bg-night-900/[0.85] px-[18px] py-2.5 text-sm font-medium text-lilac-100">
+            <span aria-hidden="true" className="h-2 w-2 rounded-full bg-brand-pink" />
+            Galápagos, Ecuador · Open to relocation
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
 }
-  
-export default SectionWrapper(Contact, "contact");

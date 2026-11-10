@@ -6,17 +6,24 @@ Live site: https://jhonatan-quihuiri.vercel.app
 
 ## Sections
 
+- **Hero:** introduction with links to GitHub and LinkedIn.
 - **About:** profile overview and services.
-- **My Stack:** languages and tools.
-- **Projects:** project cards with live links and QR codes.
+- **My Stack:** skills grouped the same way as in the CV.
+- **Projects:** Zero and Wego featured first, then the rest of the projects with demo and code links.
 - **Work:** timeline of professional experience.
 - **Contact:** contact form that sends an automatic reply by email.
 
 ## Editing the content
 
-All the portfolio content (stack icons, projects and the work timeline) lives in `src/constants/index.tsx`.
-In a project card, leave `url` and `qr` empty to hide the "Launch or Scan" button, and leave `source_code_link`
-empty to hide the GitHub button (for private repositories).
+All the portfolio content lives in `src/constants/index.ts`, typed in `src/types/portfolio.ts`:
+
+- `skillGroups`: the My Stack cards.
+- `featuredProjects` and `projects`: the project cards. Each project lists its buttons in `links`
+  (`kind: "live"` for a demo, `kind: "code"` for a repository); leave `links` empty to show no buttons.
+- `jobs`: the Work timeline, newest first.
+
+Colors and fonts are defined in `tailwind.config.js` (`night`, `lilac`, `brand` and `tag` palettes) and
+`src/app/layout.tsx` (Poppins, loaded with `next/font`).
 
 ## Run locally
 
@@ -32,4 +39,4 @@ The contact form needs the `GMAIL_USER` and `GMAIL_PASS` environment variables.
 
 ## Stack
 
-Next.js 13 (App Router), React, TypeScript, Tailwind CSS, Framer Motion, Three.js / Vanta and Nodemailer.
+Next.js 13 (App Router), React, TypeScript, Tailwind CSS, Framer Motion and Nodemailer.

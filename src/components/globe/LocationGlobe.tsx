@@ -73,6 +73,7 @@ export default function LocationGlobe() {
       ref={boxRef}
       role="img"
       aria-label={`3D globe with a marker on ${homeLocation.name}, ${homeLocation.region}`}
+      data-halo-target=""
       className="relative aspect-square w-[min(420px,92%)]"
     >
       <div

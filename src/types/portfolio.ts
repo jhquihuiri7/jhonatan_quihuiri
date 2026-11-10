@@ -40,6 +40,14 @@ export type FeaturedProject = Project & {
   qr?: { href: string; image: string; alt: string };
 };
 
+export type GeoLocation = {
+  name: string;
+  region: string;
+  /** Decimal degrees; south and west are negative. */
+  lat: number;
+  lon: number;
+};
+
 export type Job = {
   role: string;
   company: string;

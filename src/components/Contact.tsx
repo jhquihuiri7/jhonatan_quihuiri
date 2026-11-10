@@ -2,6 +2,7 @@
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { toast } from "sonner";
+import LocationGlobe from "./globe/LocationGlobe";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -128,26 +129,10 @@ export default function Contact() {
             aria-hidden="true"
             className="pointer-events-none absolute left-1/2 top-[46%] aspect-square w-[460px] max-w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(79,124,255,0.32),rgba(79,124,255,0))]"
           />
-          {/* Globe illustration with a marker on the Galápagos */}
-          <div
-            role="img"
-            aria-label="Globe with a marker on the Galápagos Islands"
-            className="globe relative aspect-square w-[min(340px,80%)] overflow-hidden rounded-full"
-          >
-            <span aria-hidden="true" className="absolute inset-x-0 top-1/2 h-px bg-white/[0.16]" />
-            <span aria-hidden="true" className="absolute inset-x-[-10%] top-[26%] h-[48%] rounded-full border border-white/[0.14]" />
-            <span aria-hidden="true" className="absolute inset-x-[10%] top-[12%] h-[76%] rounded-full border border-white/10" />
-            <span aria-hidden="true" className="absolute inset-y-0 left-1/2 w-px bg-white/[0.16]" />
-            <span aria-hidden="true" className="absolute inset-y-[-10%] left-[28%] w-[44%] rounded-full border border-white/[0.14]" />
-            <span aria-hidden="true" className="absolute inset-y-0 left-[12%] w-[76%] rounded-full border border-white/10" />
-            <span
-              aria-hidden="true"
-              className="absolute left-[36%] top-[53%] h-3 w-3 rounded-full bg-brand-pink shadow-[0_0_0_6px_rgba(237,7,98,0.25),0_0_18px_rgba(237,7,98,0.8)]"
-            />
-          </div>
+          <LocationGlobe />
           <p className="relative inline-flex items-center gap-2.5 rounded-full border border-white/[0.12] bg-night-900/[0.85] px-[18px] py-2.5 text-sm font-medium text-lilac-100">
             <span aria-hidden="true" className="h-2 w-2 rounded-full bg-brand-pink" />
-            Galápagos, Ecuador · Open to relocation
+            San Cristóbal, Galápagos · Open to relocation
           </p>
         </Reveal>
       </div>

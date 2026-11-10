@@ -1,23 +1,10 @@
+import Navbar from "./Navbar";
+import Header from "./Header";
+import About from "./About";
+import Tech from "./Tech";
+import Projects from "./Projects";
+import Work from "./Work";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
-import Navbar from './Navbar';
-import Experience from './Experience';
-import Hero from './Hero';
-import About from './About';
-import Work from './Works';
-import Contact from './Contact';
-import Tech from './Tech';
-import ParticlesBackground from './Particles';
-import Header from './Header';
-import Footer from './Footer'
-export {
-  Navbar,
-  Experience,
-  Hero,
-  About,
-  Work,
-  Contact,
-  Tech,
-  ParticlesBackground,
-  Header,
-  Footer,
-};
+export { Navbar, Header, About, Tech, Projects, Work, Contact, Footer };

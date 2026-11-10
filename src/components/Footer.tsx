@@ -1,38 +1,37 @@
-import {SectionWrapper} from "@/wrapper";
-import {color, motion} from "framer-motion";
-import {fadeIn} from "@/utils/motion";
-import Tilt from "react-parallax-tilt";
-import React from "react";
-import {social} from "@/constants";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+import { social } from "@/constants";
 
-
-const Footer = () => {
-    return(
-        <div className="flex flex-col justify-center items-center">
-            <Tilt className="xl:w-[910px] w-[90%] bg-white/[.2] flex flex-col justify-center items-center rounded-xl pt-3 mb-10">
-                <div className="w-[100%] flex xl:flex-row flex-col xl:justify-around justify-center items-center">
-                    <div className="flex flex-row px-10">
-                        <h2 className="text-white text-xl font-bold my-3">Thank you for visiting my portfolio!</h2>
-                        <img src="/logo.png" alt="logo" className="w-12 h-12 object-contain"></img>
-                    </div>
-                    <div className="flex flex-row bg-gradient-to-t from-[#031c26] from-0% to-[#08516e] to-90% rounded-xl py-3 my-3">
-                        {social.map(({url,icon}, index)=>(
-
-                            <a href={url} target="_blank" key={index}><img className="h-[30px] w-[30px] mx-5 invert-0" src={icon} style={{filter:"invert(1)"}}/></a>
-                        ))}
-                    </div>
-                </div>
-                <span className="text-black text-[14px]">Developed by <strong className="text-[#08516e]">Jhonatan Quihuiri</strong></span>
-                <Tilt className="xl:w-[880px] w-[93%] mt-3">
-                    <motion.div
-                        variants={fadeIn("rigth","spring",0.5, 0.75)}
-                        className="w-full bg-gradient-to-tr from-[#882afa] from-0% to-[#ffa0d8] to-90% h-[3px] rounded-[20px] shadow-card"
-                    >
-
-                    </motion.div>
-                </Tilt>
-            </Tilt>
+export default function Footer() {
+  return (
+    <footer className="mx-auto max-w-[1200px] px-5 pb-12 pt-20 sm:px-10">
+      <div className="rounded-[22px] bg-gradient-to-br from-brand-violet/75 to-brand-rose/75 p-px">
+        <div className="flex flex-wrap items-center justify-between gap-5 rounded-[21px] bg-night-900 px-[clamp(20px,4vw,40px)] py-[26px]">
+          <div className="flex items-center gap-4">
+            <Image src="/logo.png" alt="" width={44} height={44} className="h-11 w-11 object-contain" />
+            <div>
+              <p className="text-lg font-bold">Thank you for visiting my portfolio!</p>
+              <p className="mt-1 text-sm text-lilac-300">
+                Developed by <strong className="font-semibold text-white">Jhonatan Quihuiri</strong>
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {social.map(({ label, url }) => (
+              <a
+                key={label}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-white/20 px-5 text-sm font-medium text-white transition-colors hover:border-white/40 hover:bg-white/10"
+              >
+                {label}
+                <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </a>
+            ))}
+          </div>
         </div>
-    )
+      </div>
+    </footer>
+  );
 }
-export default SectionWrapper(Footer,"footer")

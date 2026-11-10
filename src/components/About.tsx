@@ -1,58 +1,49 @@
-'use client'
-import React, { useCallback } from 'react'
-import Tilt from 'react-parallax-tilt'
-import {motion} from 'framer-motion'
-import {services} from '@/constants/index'
-import {fadeIn, textVariant} from '@/utils/motion'
-import {SectionWrapper} from '@/wrapper/index'
+import Image from "next/image";
+import { services } from "@/constants";
+import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
-const ServiceCard = ({ service, index }: { service: {icon: string, title: string}; index: number}) => (
-    <Tilt className="w-[250px]">
-        <motion.div
-            variants={fadeIn("rigth","spring",0.5 * index, 0.75)}
-            className="w-full bg-gradient-to-tr from-[#882afa] from-0% to-[#ffa0d8] to-90% p-[1px] rounded-[20px] shadow-card h-[170px]"
-        >
-            <div
-                className="bg-tertiary rounded-[20px] py-4 px-10 flex justify-evenly items-center flex-col h-full"
-            >
-                <img
-                    src={service.icon}
-                    alt={service.title}
-                    className="w-20 h-20 object-contain"
-                />
-                <h3 className="text-white text-lg text-bold text-center">
-                    {service.title}
-                </h3>
-            </div>
-        </motion.div>
-    </Tilt>
-)
-const About = () => {
+export default function About() {
   return (
-    <>
-      <motion.div variants={textVariant(0.1)} className="sm:px-10 px-5">
-        <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">Introduction</p>
-        <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Overview</h2>
-      </motion.div>
-      <motion.p
-          variants={fadeIn("","",0.1,1)}
-          className="mt-4 text-secondary text-[17px] max-w-3l leadeing-[30px] sm:px-10 px-5"
-      >
-          I&apos;m a Backend Developer and Data Scientist with 5+ years of experience building APIs, GIS platforms, and data
-          analytics for the public, tourism, and financial sectors. At the Governing Council of Galápagos (CGREG), I build
-          and run SIGTAR, the council&apos;s GIS-based territorial information system. I&apos;m also the founder of Logiciel
-          AppLab, the company behind Wego, a ride-hailing app live on the App Store and Google Play, and Zero, an AI
-          sports-broadcasting system I co-founded that is about to launch. I hold an MSc in Data Science and Machine
-          Learning, studied economics in Ecuador and France, won 2nd place at the NASA Space Apps Challenge 2025 in
-          San Cristóbal, and work in Spanish, English, and French. Let&apos;s connect!
-      </motion.p>
-      <div className="mt-20 flex flex-wrap justify-center gap-10 sm:px-10 px-5">
-          {services.map((service, index) =>(
-              <ServiceCard key={index} service={service} index={index}/>
-          ))}
-      </div>
-    </>
-  )
-}
+    <section
+      id="about"
+      aria-labelledby="about-title"
+      className="mx-auto max-w-[1200px] scroll-mt-20 px-5 pt-[clamp(64px,8vw,112px)] sm:px-10"
+    >
+      <SectionHeading eyebrow="Introduction" title="Overview" id="about-title" />
 
-export default SectionWrapper(About,"about")
+      <div className="mt-8 flex flex-wrap items-start gap-10">
+        <Reveal className="flex min-w-0 flex-[1_1_520px] flex-col gap-4 text-[17px] leading-[1.75] text-lilac-200">
+          <p>
+            I&apos;m a Backend Developer and Data Scientist with 5+ years of experience building APIs, GIS platforms,
+            and data analytics for the public, tourism, and financial sectors. At the Governing Council of Galápagos
+            (CGREG), I build and run SIGTAR, the council&apos;s GIS-based territorial information system.
+          </p>
+          <p>
+            I&apos;m also the founder of Logiciel AppLab, the company behind Wego, a ride-hailing app live on the App
+            Store and Google Play, and Zero, an AI sports-broadcasting system I co-founded that is about to launch. I
+            hold an MSc in Data Science and Machine Learning, studied economics in Ecuador and France, won 2nd place at
+            the NASA Space Apps Challenge 2025 in San Cristóbal, and work in Spanish, English, and French. Let&apos;s
+            connect!
+          </p>
+        </Reveal>
+
+        <div className="grid min-w-0 flex-[1_1_380px] grid-cols-[repeat(auto-fit,minmax(min(220px,100%),1fr))] gap-5">
+          {services.map((service, index) => (
+            <Reveal
+              key={service.title}
+              delay={0.1 * index}
+              className="rounded-[20px] bg-gradient-to-br from-brand-violet to-brand-rose p-px"
+            >
+              <div className="flex h-full flex-col items-start gap-3.5 rounded-[19px] bg-night-900 px-6 py-7">
+                <Image src={service.icon} alt="" width={56} height={52} className="h-[52px] w-14 object-contain" />
+                <h3 className="text-xl font-bold leading-snug">{service.title}</h3>
+                <p className="text-sm leading-relaxed text-lilac-300">{service.tools}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

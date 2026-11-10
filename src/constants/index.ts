@@ -1,5 +1,6 @@
 import type {
   FeaturedProject,
+  GeoLocation,
   Job,
   NavLink,
   Project,
@@ -19,6 +20,14 @@ export const social: SocialLink[] = [
   { label: "GitHub", url: "https://github.com/jhquihuiri7" },
   { label: "LinkedIn", url: "https://www.linkedin.com/in/jhquihuiri7/" },
 ];
+
+// Marked on the 3D globe in the Contact section (Puerto Baquerizo Moreno, San Cristóbal).
+export const homeLocation: GeoLocation = {
+  name: "San Cristóbal Island",
+  region: "Galápagos, Ecuador",
+  lat: -0.9017,
+  lon: -89.6097,
+};
 
 export const services: Service[] = [
   {

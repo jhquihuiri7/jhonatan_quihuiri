@@ -2,19 +2,10 @@ import { ArrowUpRight } from "lucide-react";
 import { social } from "@/constants";
 import Reveal from "./Reveal";
 
+// The iridescent ring that starts in this section is drawn by ScrollHalo, which moves it along the page.
 export default function Header() {
   return (
-    <section id="top" aria-label="Introduction" className="relative isolate overflow-hidden pt-[72px]">
-      {/* Decorative glow and iridescent ring */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-[10vw] top-6 -z-10 aspect-square w-[clamp(320px,46vw,660px)] rounded-full bg-[radial-gradient(closest-side,rgba(145,94,255,0.28),rgba(145,94,255,0)_72%)]"
-      />
-      <div
-        aria-hidden="true"
-        className="halo-ring pointer-events-none absolute -right-[5.5vw] top-16 -z-10 aspect-square w-[clamp(240px,35vw,500px)] rounded-full opacity-75 blur-[9px] motion-safe:animate-spin-slow"
-      />
-
+    <section id="top" aria-label="Introduction" className="relative pt-[72px]">
       <div className="mx-auto flex max-w-[1200px] flex-col gap-[clamp(28px,4vw,44px)] px-5 pb-12 pt-[clamp(56px,8vw,104px)] sm:px-10">
         <Reveal>
           <p
